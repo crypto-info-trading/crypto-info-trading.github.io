@@ -68,6 +68,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .button:hover, .button:focus-visible { transform: translateY(-2px); background: var(--green-2); box-shadow: 0 16px 42px rgba(14, 159, 99, .36); }
 .button-small { min-height: 43px; padding-inline: 17px; font-size: 12px; }
 .button-large { min-height: 68px; padding-inline: 30px; font-size: 15px; }
+.mail-icon { display: inline-flex; align-items: center; justify-content: center; }
 .text-link { display: inline-flex; align-items: center; gap: 14px; color: #c4cec8; font-size: 14px; font-weight: 700; }
 .text-link span { color: var(--lime); font-size: 18px; }
 .text-link:hover, .text-link:focus-visible { color: var(--white); }
