@@ -295,14 +295,16 @@ body.payment-open { overflow: hidden; }
 .partner-mark i { color: var(--lime); font-family: Consolas, monospace; font-size: 24px; font-style: normal; }
 .partner-mark strong { font-size: 30px; letter-spacing: -.04em; }
 .bingx-lockup { display: inline-flex; align-items: center; gap: 12px; }
-.bingx-lockup img { width: 42px; height: 42px; flex: 0 0 auto; border-radius: 9px; box-shadow: 0 10px 28px rgba(19, 77, 255, .28); }
+.bingx-lockup .bingx-icon { width: 42px; height: 42px; flex: 0 0 auto; border-radius: 9px; box-shadow: 0 10px 28px rgba(19, 77, 255, .28); }
+.bingx-lockup .bingx-wordmark { width: auto; height: 26px; flex: 0 0 auto; }
 .partner-copy h2 { margin: 0; max-width: 800px; font-size: clamp(46px, 5.2vw, 70px); line-height: 1.02; letter-spacing: -.045em; }
 .partner-copy p { max-width: 720px; margin: 28px 0 38px; color: #a2afa7; font-size: 18px; line-height: 1.7; }
 .partner-card { position: relative; min-height: 410px; padding: 34px; border: 1px solid rgba(141, 252, 156, .24); background: linear-gradient(145deg, rgba(24, 200, 121, .14), rgba(1, 5, 3, .62)); box-shadow: var(--shadow); overflow: hidden; }
 .partner-card::after { content: "↗"; position: absolute; right: -18px; bottom: -68px; color: rgba(141, 252, 156, .06); font-size: 290px; line-height: 1; }
 .partner-card-top { display: flex; justify-content: space-between; color: var(--lime); font-family: Consolas, monospace; font-size: 10px; letter-spacing: .16em; }
 .partner-x { position: relative; z-index: 2; display: flex; align-items: center; gap: 20px; margin-top: 78px; color: var(--white); font-size: 72px; font-weight: 900; letter-spacing: -.07em; }
-.partner-x img { width: 86px; height: 86px; flex: 0 0 auto; border-radius: 16px; box-shadow: 0 18px 44px rgba(19, 77, 255, .34); }
+.partner-x .bingx-icon { width: 86px; height: 86px; flex: 0 0 auto; border-radius: 16px; box-shadow: 0 18px 44px rgba(19, 77, 255, .34); }
+.partner-x .bingx-wordmark { width: auto; height: 46px; flex: 0 0 auto; }
 .partner-x strong { font: inherit; letter-spacing: inherit; }
 .partner-line { width: 94px; height: 5px; margin: 22px 0; background: var(--green-2); }
 .partner-card p { position: relative; z-index: 2; margin: 0; color: #c4d0c8; line-height: 1.45; }
@@ -606,7 +608,8 @@ body.payment-open { overflow: hidden; }
   .partner-copy p { font-size: 16px; }
   .partner-card { min-height: 350px; }
   .partner-x { margin-top: 62px; gap: 16px; font-size: 58px; }
-  .partner-x img { width: 70px; height: 70px; border-radius: 13px; }
+  .partner-x .bingx-icon { width: 70px; height: 70px; border-radius: 13px; }
+  .partner-x .bingx-wordmark { height: 38px; }
   .vip-benefits { grid-template-columns: 1fr; }
   .vip-card { min-height: 235px; }
   .join-panel { margin-top: 52px; padding: 28px; }
@@ -682,10 +685,12 @@ body.payment-open { overflow: hidden; }
   .partner-mark { gap: 11px; font-size: 11px; }
   .partner-mark strong { font-size: 25px; }
   .bingx-lockup { gap: 8px; }
-  .bingx-lockup img { width: 34px; height: 34px; border-radius: 7px; }
+  .bingx-lockup .bingx-icon { width: 34px; height: 34px; border-radius: 7px; }
+  .bingx-lockup .bingx-wordmark { height: 21px; }
   .partner-card { padding: 26px; }
   .partner-x { gap: 12px; font-size: 50px; }
-  .partner-x img { width: 60px; height: 60px; border-radius: 11px; }
+  .partner-x .bingx-icon { width: 60px; height: 60px; border-radius: 11px; }
+  .partner-x .bingx-wordmark { height: 32px; }
   .partner-code { left: 26px; }
   .join-panel { padding: 24px 20px; }
   .social-shortcuts { flex-wrap: wrap; }
