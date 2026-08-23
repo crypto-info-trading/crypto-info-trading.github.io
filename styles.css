@@ -420,6 +420,30 @@ body.payment-open { overflow: hidden; }
 .instagram-copy h3 { margin: 10px 0 22px; color: var(--white); font-size: 24px; line-height: 1.18; letter-spacing: -.025em; }
 .instagram-copy .button { width: 100%; }
 
+.results { position: relative; overflow: hidden; background: #08100c; }
+.results-inner { position: relative; z-index: 2; }
+.results-aura { position: absolute; left: 50%; top: -160px; width: 640px; height: 640px; border-radius: 50%; filter: blur(150px); opacity: .16; background: var(--lime); transform: translateX(-50%); }
+.results-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-bottom: 40px; }
+.result-card { position: relative; aspect-ratio: 4 / 3; overflow: hidden; border: 1px solid rgba(255, 255, 255, .1); background: #050806; }
+.result-card img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .45s ease; }
+.result-card:hover img { transform: scale(1.05); }
+.result-card figcaption { position: absolute; inset: auto 0 0 0; display: flex; align-items: baseline; justify-content: space-between; gap: 10px; padding: 14px 16px; background: linear-gradient(0deg, rgba(1, 5, 3, .92), rgba(1, 5, 3, .08)); }
+.result-card figcaption strong { color: var(--lime); font-size: 20px; letter-spacing: -.02em; }
+.result-card figcaption span { color: #b5c1ba; font-family: Consolas, monospace; font-size: 9px; text-transform: uppercase; letter-spacing: .07em; }
+.results-testimonials { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 32px; }
+.testimonial-card { position: relative; margin: 0; padding: 30px 32px; border: 1px solid rgba(141, 252, 156, .16); background: rgba(141, 252, 156, .035); }
+.testimonial-card p { margin: 0; color: #dbe4de; font-size: 16px; line-height: 1.62; }
+.testimonial-card cite { display: block; margin-top: 20px; color: var(--white); font-style: normal; font-size: 14px; font-weight: 700; }
+.testimonial-card cite span { display: inline-block; margin-left: 10px; color: #77877d; font-family: Consolas, monospace; font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; }
+.testimonial-card cite span::before { content: "· "; }
+.results-source { margin-top: 4px; }
+
+.education-reviews { margin-top: 26px; padding: 28px; border: 1px solid rgba(255, 255, 255, .1); background: rgba(255, 255, 255, .02); }
+.education-reviews-label { display: block; margin-bottom: 18px; color: var(--lime); font-family: Consolas, monospace; font-size: 10px; font-weight: 800; text-transform: uppercase; letter-spacing: .13em; }
+.education-reviews-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 18px; }
+.testimonial-card-compact { padding: 22px 24px; }
+.testimonial-card-compact p { font-size: 14px; line-height: 1.58; }
+
 .contact { position: relative; background: var(--paper); color: var(--ink); overflow: hidden; }
 .contact::before { content: ""; position: absolute; inset: 0; opacity: .42; background-image: linear-gradient(rgba(14, 159, 99, .1) 1px, transparent 1px), linear-gradient(90deg, rgba(14, 159, 99, .1) 1px, transparent 1px); background-size: 52px 52px; mask-image: linear-gradient(90deg, transparent, #000 55%, #000); }
 .contact-orbit { position: absolute; border: 1px solid rgba(14, 159, 99, .18); border-radius: 50%; pointer-events: none; }
@@ -517,6 +541,7 @@ body.payment-open { overflow: hidden; }
   .instagram-feature .social-platform-head { grid-column: 1 / -1; }
   .iphone-stage { grid-column: 1; grid-row: 2 / span 2; }
   .instagram-copy { grid-column: 2; grid-row: 2; align-self: center; }
+  .results-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 720px) {
@@ -601,6 +626,11 @@ body.payment-open { overflow: hidden; }
   .social-actions { align-items: flex-start; flex-direction: column; }
   .iphone-stage { padding-top: 14px; }
   .iphone-frame { width: min(100%, 312px); }
+  .results-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .results-testimonials { grid-template-columns: 1fr; gap: 16px; margin-bottom: 26px; }
+  .testimonial-card { padding: 24px; }
+  .education-reviews { padding: 22px; }
+  .education-reviews-grid { grid-template-columns: 1fr; margin-bottom: 14px; }
   .contact-inner { grid-template-columns: 1fr; gap: 54px; }
   .contact-card { min-height: 390px; }
   .final-cta { padding: 85px 0; }
@@ -669,6 +699,11 @@ body.payment-open { overflow: hidden; }
   .video-copy h3 { font-size: 22px; }
   .iphone-frame { width: min(100%, 296px); border-radius: 48px; }
   .iphone-screen { border-radius: 40px; }
+  .results-grid { grid-template-columns: 1fr; }
+  .result-card figcaption strong { font-size: 18px; }
+  .testimonial-card { padding: 22px; }
+  .testimonial-card p { font-size: 15px; }
+  .education-reviews-label { margin-bottom: 14px; }
   .contact-copy .section-number { display: block; margin-bottom: 30px; }
   .contact-copy h2 { font-size: 49px; }
   .contact-card { min-height: 360px; padding: 26px 22px; }
