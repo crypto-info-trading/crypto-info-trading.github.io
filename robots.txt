@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://crypto-info-trading.github.io/sitemap.xml
