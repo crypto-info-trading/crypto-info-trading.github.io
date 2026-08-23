@@ -218,7 +218,14 @@
               <li>Неограниченная по времени поддержка во время и после обучения</li>
               <li>Практика работы, построения прибыли и контроля рисков</li>
             </ul>
-            <a class="button button-large education-button" href="https://t.me/pugachev_crypto" target="_blank" rel="noopener noreferrer">Подробнее <span aria-hidden="true">↗</span></a>
+            <div class="education-price" aria-label="Стоимость тарифа">
+              <span class="education-price-old">1 500 USDT</span>
+              <strong>999 USDT</strong>
+              <small>Специальная стоимость</small>
+            </div>
+            <div class="education-actions">
+              <button class="button button-large education-button payment-trigger" type="button" data-payment-plan="trader">Оплатить USDT <img class="usdt-button-icon" src="assets/usdt-coin-transparent-v3.png" alt="" width="40" height="40" aria-hidden="true"></button>
+            </div>
           </article>
 
           <article class="education-card education-card-featured reveal reveal-delay">
@@ -238,7 +245,14 @@
               <li>Персональная обратная связь и поддержка без ограничения по времени</li>
               <li>Фокус на работе, прибыли и системном контроле рисков</li>
             </ul>
-            <a class="button button-large education-button" href="https://t.me/pugachev_crypto" target="_blank" rel="noopener noreferrer">Подробнее <span aria-hidden="true">↗</span></a>
+            <div class="education-price" aria-label="Стоимость тарифа">
+              <span class="education-price-old">2 000 USDT</span>
+              <strong>1 499 USDT</strong>
+              <small>Индивидуальный формат</small>
+            </div>
+            <div class="education-actions">
+              <button class="button button-large education-button payment-trigger" type="button" data-payment-plan="individual">Оплатить USDT <img class="usdt-button-icon" src="assets/usdt-coin-transparent-v3.png" alt="" width="40" height="40" aria-hidden="true"></button>
+            </div>
           </article>
         </div>
 
@@ -251,7 +265,101 @@
           <a class="text-link" href="#vip">Перейти к VIP Community <span aria-hidden="true">↓</span></a>
         </aside>
 
-        <p class="education-note reveal"><span>!</span> Формат и условия старта уточняются лично в Telegram.</p>
+        <p class="education-note reveal"><span>!</span> Оплата доступна только в USDT. Перед переводом обязательно проверьте выбранную сеть.</p>
+      </div>
+
+      <div class="payment-modal" data-payment-modal aria-hidden="true">
+        <div class="payment-backdrop" data-payment-close aria-hidden="true"></div>
+        <section class="payment-dialog" role="dialog" aria-modal="true" aria-labelledby="payment-title">
+          <button class="payment-close" type="button" data-payment-close aria-label="Закрыть окно оплаты">×</button>
+
+          <div class="payment-summary">
+            <span class="payment-kicker">SECURE USDT PAYMENT</span>
+            <h3 id="payment-title">Оплата обучения</h3>
+            <p class="payment-plan-name" data-payment-plan-name>TRADER с 0 до PRO 3.0</p>
+            <div class="payment-price">
+              <span data-payment-old-price>1 500 USDT</span>
+              <strong data-payment-price>999 USDT</strong>
+            </div>
+
+            <div class="payment-steps" aria-label="Порядок оплаты">
+              <span><b>01</b> Выберите сеть</span>
+              <span><b>02</b> Переведите точную сумму</span>
+              <span><b>03</b> Отправьте TXID и скриншот</span>
+            </div>
+
+            <div class="payment-networks" role="group" aria-label="Выберите сеть USDT">
+              <button type="button" data-payment-network="trc20">TRC20<small>TRON</small></button>
+              <button type="button" data-payment-network="bep20">BEP20<small>BNB Chain</small></button>
+              <button type="button" data-payment-network="erc20">ERC20<small>Ethereum</small></button>
+              <button type="button" data-payment-network="ton">TON<small>TON Network</small></button>
+              <button type="button" data-payment-network="sol">SOL<small>Solana</small></button>
+            </div>
+
+            <div class="payment-wallet">
+              <div class="payment-qr-wrap">
+                <img data-payment-qr src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&amp;data=TFxyrMF5ArA4zmWMhLM5ibPCMNEZyV9Qjz" alt="QR-код адреса USDT TRC20" width="240" height="240" referrerpolicy="no-referrer">
+              </div>
+              <div class="payment-address">
+                <small data-payment-network-label>USDT · TRC20</small>
+                <code data-payment-address>TFxyrMF5ArA4zmWMhLM5ibPCMNEZyV9Qjz</code>
+                <button type="button" data-payment-copy>Скопировать адрес</button>
+              </div>
+            </div>
+
+            <p class="payment-warning" data-payment-warning><b>Важно:</b> отправляйте только USDT по сети TRC20. Перевод через другую сеть может быть безвозвратно утрачен.</p>
+          </div>
+
+          <form class="payment-proof" action="https://formsubmit.co/crypto.info.trading@yandex.by" method="POST" enctype="multipart/form-data" data-payment-form>
+            <input type="hidden" name="_subject" value="Новая оплата обучения — CRYPTO INFO | TRADING">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="https://t.me/pugachev_crypto">
+            <input class="payment-honey" type="text" name="_honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+            <input type="hidden" name="Тариф" data-payment-form-plan value="TRADER с 0 до PRO 3.0">
+            <input type="hidden" name="Сумма" data-payment-form-price value="999 USDT">
+            <input type="hidden" name="Сеть" data-payment-form-network value="USDT TRC20">
+            <input type="hidden" name="Адрес получателя" data-payment-form-address value="TFxyrMF5ArA4zmWMhLM5ibPCMNEZyV9Qjz">
+
+            <div class="payment-proof-head">
+              <span>ПОДТВЕРЖДЕНИЕ ПЕРЕВОДА</span>
+              <h4>Отправьте данные для проверки</h4>
+              <p>После отправки формы откроется личный Telegram Alexey Pugachev.</p>
+            </div>
+
+            <label class="payment-field">
+              <span>Ваш Telegram username</span>
+              <input type="text" name="Telegram" placeholder="@username" minlength="5" maxlength="33" required autocomplete="off">
+            </label>
+
+            <label class="payment-field">
+              <span>TXID / хеш транзакции</span>
+              <input type="text" name="TXID" placeholder="Вставьте идентификатор перевода" minlength="12" maxlength="140" required autocomplete="off">
+            </label>
+
+            <label class="payment-file">
+              <span>Скриншот перевода <b>обязательно</b></span>
+              <input type="file" name="attachment" accept="image/png,image/jpeg,image/webp" required data-payment-file>
+              <span class="payment-file-ui">
+                <strong data-payment-file-name>Выбрать PNG, JPG или WEBP</strong>
+                <small>Не более 10 МБ</small>
+              </span>
+            </label>
+
+            <label class="payment-field">
+              <span>Комментарий <small>необязательно</small></span>
+              <textarea name="Комментарий" rows="3" placeholder="Имя отправителя или дополнительная информация"></textarea>
+            </label>
+
+            <label class="payment-consent">
+              <input type="checkbox" name="Согласие на обработку данных" value="Да" required>
+              <span>Согласен на передачу платёжных данных и скриншота через FormSubmit для проверки оплаты.</span>
+            </label>
+
+            <p class="payment-form-error" data-payment-error role="alert"></p>
+            <button class="button button-large payment-submit" type="submit">Отправить подтверждение <span aria-hidden="true">→</span></button>
+            <small class="payment-privacy">Никогда не отправляйте seed-фразу, пароль или приватный ключ.</small>
+          </form>
+        </section>
       </div>
     </section>
 
@@ -411,7 +519,7 @@
               <div class="iphone-frame" aria-label="Instagram-профиль Alexey Pugachev в стилизованном iPhone 17 Pro Max">
                 <div class="iphone-screen">
                   <div class="dynamic-island" aria-hidden="true"></div>
-                  <img class="instagram-screen-shot" src="assets/instagram-profile-large-text-v2.png" alt="Актуальный скриншот Instagram-профиля pugachev.alxy с увеличенным текстом">
+                  <img class="instagram-screen-shot" src="assets/instagram-profile-dark-v3.jpg" alt="Актуальный скриншот Instagram-профиля pugachev.alxy в тёмной теме">
                   <div class="phone-color-grade" aria-hidden="true"></div>
                 </div>
               </div>
@@ -486,6 +594,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=20260823-2"></script>
+  <script src="script.js?v=20260823-3"></script>
 </body>
 </html>

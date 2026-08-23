@@ -99,4 +99,207 @@ if (reduceMotion || !('IntersectionObserver' in window)) {
   revealItems.forEach(item => observer.observe(item));
 }
 
+const paymentModal = document.querySelector('[data-payment-modal]');
+
+if (paymentModal) {
+  const paymentPlans = {
+    trader: {
+      name: 'TRADER с 0 до PRO 3.0',
+      price: '999 USDT',
+      oldPrice: '1 500 USDT'
+    },
+    individual: {
+      name: 'Индивидуальный PRO 3.0',
+      price: '1 499 USDT',
+      oldPrice: '2 000 USDT'
+    }
+  };
+
+  const paymentNetworks = {
+    trc20: {
+      code: 'TRC20',
+      label: 'TRON',
+      address: 'TFxyrMF5ArA4zmWMhLM5ibPCMNEZyV9Qjz'
+    },
+    bep20: {
+      code: 'BEP20',
+      label: 'BNB Smart Chain',
+      address: '0x420d1fb0d0135d6172c4273b0f3bc01dc1d46d39'
+    },
+    erc20: {
+      code: 'ERC20',
+      label: 'Ethereum',
+      address: '0x420d1fb0d0135d6172c4273b0f3bc01dc1d46d39'
+    },
+    ton: {
+      code: 'TON',
+      label: 'TON Network',
+      address: 'UQCmhIwcfZGQb_AwKiAujijb19g8UrdJPw9-5AeUQsJCX-G6'
+    },
+    sol: {
+      code: 'SOL',
+      label: 'Solana',
+      address: '5nQotK9T6FYYTd5pSTXkNbg6xrnM4R7swQiW9BrWfqCH'
+    }
+  };
+
+  const planName = paymentModal.querySelector('[data-payment-plan-name]');
+  const price = paymentModal.querySelector('[data-payment-price]');
+  const oldPrice = paymentModal.querySelector('[data-payment-old-price]');
+  const networkLabel = paymentModal.querySelector('[data-payment-network-label]');
+  const address = paymentModal.querySelector('[data-payment-address]');
+  const qr = paymentModal.querySelector('[data-payment-qr]');
+  const warning = paymentModal.querySelector('[data-payment-warning]');
+  const copyButton = paymentModal.querySelector('[data-payment-copy]');
+  const form = paymentModal.querySelector('[data-payment-form]');
+  const fileInput = paymentModal.querySelector('[data-payment-file]');
+  const fileName = paymentModal.querySelector('[data-payment-file-name]');
+  const error = paymentModal.querySelector('[data-payment-error]');
+  const submitButton = form?.querySelector('.payment-submit');
+  const submitButtonText = submitButton?.innerHTML;
+  const networkButtons = [...paymentModal.querySelectorAll('[data-payment-network]')];
+  let selectedNetwork = 'trc20';
+  let lastTrigger = null;
+
+  const setError = message => {
+    if (error) error.textContent = message;
+  };
+
+  const setPaymentNetwork = networkId => {
+    const network = paymentNetworks[networkId];
+    if (!network) return;
+    selectedNetwork = networkId;
+    networkButtons.forEach(button => {
+      const isActive = button.dataset.paymentNetwork === networkId;
+      button.classList.toggle('active', isActive);
+      button.setAttribute('aria-pressed', String(isActive));
+    });
+    if (networkLabel) networkLabel.textContent = `USDT · ${network.code}`;
+    if (address) address.textContent = network.address;
+    if (qr) {
+      qr.src = `https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=${encodeURIComponent(network.address)}`;
+      qr.alt = `QR-код адреса USDT ${network.code}`;
+    }
+    if (warning) {
+      warning.innerHTML = `<b>Важно:</b> отправляйте только USDT по сети ${network.code} (${network.label}). Перевод через другую сеть может быть безвозвратно утрачен.`;
+    }
+    const networkField = form?.querySelector('[data-payment-form-network]');
+    const addressField = form?.querySelector('[data-payment-form-address]');
+    if (networkField) networkField.value = `USDT ${network.code} (${network.label})`;
+    if (addressField) addressField.value = network.address;
+    if (copyButton) copyButton.textContent = 'Скопировать адрес';
+  };
+
+  const openPayment = planId => {
+    const plan = paymentPlans[planId];
+    if (!plan) return;
+    if (planName) planName.textContent = plan.name;
+    if (price) price.textContent = plan.price;
+    if (oldPrice) oldPrice.textContent = plan.oldPrice;
+    const planField = form?.querySelector('[data-payment-form-plan]');
+    const priceField = form?.querySelector('[data-payment-form-price]');
+    if (planField) planField.value = plan.name;
+    if (priceField) priceField.value = plan.price;
+    setPaymentNetwork('trc20');
+    setError('');
+    paymentModal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('payment-open');
+    paymentModal.querySelector('[data-payment-close]')?.focus();
+  };
+
+  const closePayment = () => {
+    paymentModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('payment-open');
+    if (submitButton) {
+      submitButton.classList.remove('is-loading');
+      submitButton.disabled = false;
+      if (submitButtonText) submitButton.innerHTML = submitButtonText;
+    }
+    lastTrigger?.focus();
+  };
+
+  document.querySelectorAll('[data-payment-plan]').forEach(trigger => {
+    trigger.addEventListener('click', () => {
+      lastTrigger = trigger;
+      openPayment(trigger.dataset.paymentPlan);
+    });
+  });
+
+  paymentModal.querySelectorAll('[data-payment-close]').forEach(button => {
+    button.addEventListener('click', closePayment);
+  });
+
+  networkButtons.forEach(button => {
+    button.addEventListener('click', () => setPaymentNetwork(button.dataset.paymentNetwork));
+  });
+
+  copyButton?.addEventListener('click', async () => {
+    const walletAddress = paymentNetworks[selectedNetwork].address;
+    try {
+      if (navigator.clipboard?.writeText && window.isSecureContext) {
+        await navigator.clipboard.writeText(walletAddress);
+      } else {
+        const helper = document.createElement('textarea');
+        helper.value = walletAddress;
+        helper.setAttribute('readonly', '');
+        helper.style.position = 'fixed';
+        helper.style.opacity = '0';
+        document.body.appendChild(helper);
+        helper.select();
+        document.execCommand('copy');
+        helper.remove();
+      }
+      copyButton.textContent = 'Адрес скопирован ✓';
+      window.setTimeout(() => { copyButton.textContent = 'Скопировать адрес'; }, 2200);
+    } catch {
+      copyButton.textContent = 'Скопируйте адрес вручную';
+    }
+  });
+
+  fileInput?.addEventListener('change', () => {
+    const selectedFile = fileInput.files?.[0];
+    setError('');
+    if (!selectedFile) {
+      if (fileName) fileName.textContent = 'Выбрать PNG, JPG или WEBP';
+      return;
+    }
+    const allowedTypes = ['image/png', 'image/jpeg', 'image/webp'];
+    if (!allowedTypes.includes(selectedFile.type)) {
+      fileInput.value = '';
+      if (fileName) fileName.textContent = 'Выбрать PNG, JPG или WEBP';
+      setError('Загрузите скриншот в формате PNG, JPG или WEBP.');
+      return;
+    }
+    if (selectedFile.size > 10 * 1024 * 1024) {
+      fileInput.value = '';
+      if (fileName) fileName.textContent = 'Выбрать PNG, JPG или WEBP';
+      setError('Размер скриншота не должен превышать 10 МБ.');
+      return;
+    }
+    if (fileName) fileName.textContent = selectedFile.name;
+  });
+
+  form?.addEventListener('submit', event => {
+    const selectedFile = fileInput?.files?.[0];
+    if (!selectedFile) {
+      event.preventDefault();
+      setError('Добавьте скриншот перевода — без него заявка не отправится.');
+      fileInput?.focus();
+      return;
+    }
+    setError('');
+    if (submitButton) {
+      submitButton.classList.add('is-loading');
+      submitButton.disabled = true;
+      submitButton.textContent = 'Отправляем подтверждение…';
+    }
+  });
+
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && paymentModal.getAttribute('aria-hidden') === 'false') closePayment();
+  });
+
+  setPaymentNetwork('trc20');
+}
+
 document.querySelector('[data-year]').textContent = new Date().getFullYear();
