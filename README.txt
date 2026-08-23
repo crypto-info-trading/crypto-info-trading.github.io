@@ -1,0 +1,57 @@
+CRYPTO INFO | TRADING — версия для GitHub Pages
+
+Бесплатная публикация:
+1. Создайте на GitHub новый публичный репозиторий.
+2. Загрузите в корень репозитория всё содержимое этой папки, включая
+   скрытые элементы .github и .nojekyll.
+3. Откройте Settings → Pages.
+4. В поле Source выберите GitHub Actions.
+5. Дождитесь завершения задачи CRYPTO INFO website во вкладке Actions.
+
+Сайт получит бесплатный адрес:
+https://ИМЯ-ПОЛЬЗОВАТЕЛЯ.github.io/ИМЯ-РЕПОЗИТОРИЯ/
+
+Состав:
+- index.html — структура и текст сайта
+- styles.css — визуальное оформление и адаптивность
+- script.js — меню, анимации и индикатор прокрутки
+- assets — логотипы CRYPTO INFO и BingX, оригинальная фотография 1254×1254 без перегенерации
+
+Настроенные ссылки:
+- Telegram-канал:
+https://t.me/thecryptoinfotrading
+- Партнёрская регистрация BingX:
+https://bingx.com/ru/partner/cryptoinfotrading
+- Бот для отправки UID и вступления в VIP Community:
+https://t.me/vipcommunitybingx_bot
+- Пост с описанием VIP Community:
+https://t.me/thecryptoinfotrading/14229
+- YouTube-канал:
+https://www.youtube.com/@cryptoinfocom
+- Instagram:
+https://www.instagram.com/pugachev.alxy/
+- Личный Telegram для вопросов по обучению:
+https://t.me/pugachev_crypto
+- Электронная почта:
+crypto.info.trading@yandex.by
+
+На сайте указаны основатель и автор Alexey Pugachev, официальный статус
+партнёра BingX, условия вступления в закрытое VIP Community и отдельный
+раздел социальных сетей с актуальным YouTube-видео и Instagram-профилем.
+Также добавлены раздел обучения с двумя тарифами и отдельная контактная
+секция для деловых обращений.
+
+Карточка YouTube в разделе «Соцсети» обновляется автоматически при публикации
+сайта и затем каждый час через GitHub Actions. Новый выпуск становится первым,
+а нажатие открывает его непосредственно на YouTube. Встроенный iframe-плеер
+не используется, поэтому посетители не увидят серые ошибки 153 или
+«Видео недоступно». Если YouTube временно не отвечает, сохраняется последняя
+рабочая резервная ссылка.
+
+В макете iPhone используется оригинальный скриншот Instagram-профиля
+assets/instagram-profile-screen.png размером 1320×2868 без сжатия.
+Для отображения внутри компактной модели телефона подготовлена версия
+assets/instagram-profile-large-text-v2.png с увеличенной и более контрастной
+типографикой. Новый исходный скриншот сохранён без изменений как
+assets/instagram-profile-screen-v2.png. Предыдущие версии также оставлены
+в assets для безопасного отката.
