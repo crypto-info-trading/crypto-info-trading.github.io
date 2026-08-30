@@ -51,6 +51,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .site-nav a:hover::after, .site-nav a:focus-visible::after { transform: scaleX(1); transform-origin: left; }
 .menu-toggle { display: none; }
 
+.lang-toggle { display: flex; align-items: center; flex: 0 0 auto; gap: 2px; padding: 3px; border: 1px solid rgba(141, 252, 156, .25); border-radius: 999px; background: rgba(141, 252, 156, .05); }
+.lang-btn { min-width: 34px; padding: 6px 11px; border: 0; border-radius: 999px; background: none; color: #8d9c93; font-family: Consolas, monospace; font-size: 11px; font-weight: 800; letter-spacing: .05em; text-transform: uppercase; cursor: pointer; transition: background .2s ease, color .2s ease; }
+.lang-btn:hover, .lang-btn:focus-visible { color: var(--white); }
+.lang-btn.active { background: linear-gradient(120deg, var(--green), var(--green-2)); color: var(--ink); box-shadow: 0 4px 14px rgba(14, 159, 99, .3); }
+
 .button { position: relative; display: inline-flex; min-height: 54px; align-items: center; justify-content: center; gap: 16px; padding: 0 23px; border: 1px solid rgba(24, 200, 121, .65); background: linear-gradient(120deg, rgba(14, 159, 99, .88) 0%, rgba(24, 200, 121, .88) 25%, rgba(141, 252, 156, .82) 50%, rgba(24, 200, 121, .88) 75%, rgba(14, 159, 99, .88) 100%); background-size: 260% 100%; color: var(--white); font: inherit; font-size: 14px; font-weight: 850; letter-spacing: .01em; cursor: pointer; box-shadow: 0 12px 34px rgba(14, 159, 99, .2); transition: transform .25s, box-shadow .25s; animation: buttonShimmer 6s ease-in-out infinite, buttonFloat 4.2s ease-in-out infinite; }
 .button span { color: var(--lime); font-size: 18px; }
 .button[href^="https://t.me/"] > span { display: none; }
@@ -571,6 +576,9 @@ body.payment-open { overflow: hidden; }
   .heading-photo { order: -1; max-width: 280px; margin-inline: auto; }
   .container { width: min(calc(100% - 32px), var(--container)); }
   .header-cta { display: none; }
+  .header-inner { gap: 14px; }
+  .lang-toggle { padding: 2px; }
+  .lang-btn { min-width: 28px; padding: 5px 8px; font-size: 10px; }
   .menu-toggle { margin-left: auto; }
   .brand { width: 104px; }
   .hero { min-height: 880px; }

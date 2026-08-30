@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" data-i18n-title="cabinet.meta.title" data-i18n-meta-description="cabinet.meta.description">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,20 +12,25 @@
   <link rel="stylesheet" href="cabinet-4d70bc8a.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Перейти к содержанию</a>
+  <a class="skip-link" href="#main" data-i18n="nav.skipLink">Перейти к содержанию</a>
 
   <header class="site-header lp-header scrolled" data-header>
     <div class="container header-inner">
-      <a class="brand" href="index.html" aria-label="CRYPTO INFO | TRADING — на главную">
+      <a class="brand" href="index.html" data-i18n-aria="nav.brandAria" aria-label="CRYPTO INFO | TRADING — на главную">
         <img src="assets/logo-full.png" alt="CRYPTO INFO | TRADING">
       </a>
 
+      <div class="lang-toggle" data-lang-toggle role="group" aria-label="Switch language / Переключить язык">
+        <button type="button" class="lang-btn" data-lang="ru">RU</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+      </div>
+
       <div class="lp-header-meta">
-        <span>Личный кабинет ученика</span>
+        <span data-i18n="cabinet.header.label">Личный кабинет ученика</span>
         <strong>TRADER с 0 до PRO 3.0</strong>
       </div>
 
-      <a class="button button-small header-cta" href="https://t.me/+ScRtuSmc5cEyNjZi" target="_blank" rel="noopener noreferrer">
+      <a class="button button-small header-cta" href="https://t.me/+ScRtuSmc5cEyNjZi" target="_blank" rel="noopener noreferrer" data-i18n="cabinet.header.chatButton">
         Закрытый чат «TRADER с 0 до PRO 3.0» <span aria-hidden="true">↗︎</span>
       </a>
     </div>
@@ -36,10 +41,10 @@
       <div class="container lp-hero-inner">
         <div class="heading-with-photo">
           <div class="lp-hero-copy">
-            <div class="eyebrow"><span></span> Видеоматериалы обучения</div>
+            <div class="eyebrow" data-i18n="cabinet.hero.eyebrow"><span></span> Видеоматериалы обучения</div>
             <h1>TRADER <em>с 0 до PRO 3.0</em></h1>
-            <p class="lp-hero-lead">Все видеоуроки программы — в одном месте. Смотрите в удобном для себя темпе, отмечайте пройденное и возвращайтесь в любой момент — доступ сохраняется за вами.</p>
-            <div class="lp-progress-bar" aria-label="Прогресс прохождения курса">
+            <p class="lp-hero-lead" data-i18n="cabinet.hero.lead">Все видеоуроки программы — в одном месте. Смотрите в удобном для себя темпе, отмечайте пройденное и возвращайтесь в любой момент — доступ сохраняется за вами.</p>
+            <div class="lp-progress-bar" data-i18n-aria="cabinet.progressAria" aria-label="Прогресс прохождения курса">
               <div class="lp-progress-track"><div class="lp-progress-fill" data-progress-fill></div></div>
               <span data-progress-text>0 из 55 уроков пройдено</span>
             </div>
@@ -54,7 +59,7 @@
     <section class="lp-course">
       <div class="container">
         <button class="lp-drawer-toggle" type="button" data-drawer-open>
-          <span>Программа курса</span>
+          <span data-i18n="cabinet.sidebar.label">Программа курса</span>
           <span aria-hidden="true">☰</span>
         </button>
 
@@ -62,10 +67,10 @@
           <aside class="lp-sidebar" data-sidebar>
             <div class="lp-sidebar-head">
               <div>
-                <span>Программа курса</span><br>
-                <b>5 модулей · 55 уроков</b>
+                <span data-i18n="cabinet.sidebar.label">Программа курса</span><br>
+                <b data-i18n="cabinet.sidebar.meta">5 модулей · 55 уроков</b>
               </div>
-              <button class="lp-sidebar-close" type="button" data-drawer-close aria-label="Закрыть меню">×</button>
+              <button class="lp-sidebar-close" type="button" data-drawer-close data-i18n-aria="cabinet.sidebar.closeAria" aria-label="Закрыть меню">×</button>
             </div>
             <div class="lp-modules" data-modules></div>
           </aside>
@@ -76,26 +81,26 @@
             <div class="lp-video-frame" data-video-frame>
               <div class="lp-video-placeholder">
                 <span class="lp-video-icon" aria-hidden="true">▶</span>
-                <p>Видео появится здесь после загрузки</p>
+                <p data-i18n="cabinet.video.placeholder">Видео появится здесь после загрузки</p>
               </div>
             </div>
 
             <div class="lp-lesson-head">
               <span class="lp-lesson-index" data-lesson-index>—</span>
-              <h2 data-lesson-title>Выберите урок</h2>
+              <h2 data-lesson-title data-i18n="cabinet.lesson.titleDefault">Выберите урок</h2>
             </div>
             <p class="lp-lesson-desc" data-lesson-desc></p>
 
             <div class="lp-lesson-actions">
-              <button class="button button-small lp-watched-btn" type="button" data-watched-toggle>Отметить как просмотренный</button>
+              <button class="button button-small lp-watched-btn" type="button" data-watched-toggle data-i18n="cabinet.lesson.markWatched">Отметить как просмотренный</button>
               <div class="lp-lesson-nav">
-                <button class="lp-nav-btn" type="button" data-prev-lesson aria-label="Предыдущий урок">←</button>
-                <button class="lp-nav-btn" type="button" data-next-lesson aria-label="Следующий урок">→</button>
+                <button class="lp-nav-btn" type="button" data-prev-lesson data-i18n-aria="cabinet.nav.prevAria" aria-label="Предыдущий урок">←</button>
+                <button class="lp-nav-btn" type="button" data-next-lesson data-i18n-aria="cabinet.nav.nextAria" aria-label="Следующий урок">→</button>
               </div>
             </div>
 
             <div class="lp-materials" data-materials hidden>
-              <span>Материалы урока</span>
+              <span data-i18n="cabinet.materials.label">Материалы урока</span>
               <ul data-materials-list></ul>
             </div>
           </div>
@@ -106,21 +111,22 @@
     <section class="lp-support">
       <div class="container lp-support-card">
         <div>
-          <small>Нужна помощь?</small>
-          <p>Куратор на связи в закрытом чате — если что-то не понятно по уроку или есть вопрос по домашнему заданию, пишите в любое время.</p>
+          <small data-i18n="cabinet.support.label">Нужна помощь?</small>
+          <p data-i18n="cabinet.support.desc">Куратор на связи в закрытом чате — если что-то не понятно по уроку или есть вопрос по домашнему заданию, пишите в любое время.</p>
         </div>
-        <a class="button button-large" href="https://t.me/+ScRtuSmc5cEyNjZi" target="_blank" rel="noopener noreferrer">Закрытый чат «TRADER с 0 до PRO 3.0» <span aria-hidden="true">↗︎</span></a>
+        <a class="button button-large" href="https://t.me/+ScRtuSmc5cEyNjZi" target="_blank" rel="noopener noreferrer" data-i18n="cabinet.header.chatButton">Закрытый чат «TRADER с 0 до PRO 3.0» <span aria-hidden="true">↗︎</span></a>
       </div>
     </section>
   </main>
 
   <footer class="site-footer lp-footer">
     <div class="container footer-bottom">
-      <p>Доступ к материалам предоставляется лично вам. Пожалуйста, не передавайте ссылку третьим лицам.</p>
+      <p data-i18n="cabinet.footer.disclaimer">Доступ к материалам предоставляется лично вам. Пожалуйста, не передавайте ссылку третьим лицам.</p>
       <span>© <span data-year></span> CRYPTO INFO | TRADING</span>
     </div>
   </footer>
 
-  <script src="cabinet-4d70bc8a.js?v=20260826-1"></script>
+  <script src="i18n.js?v=20260830-1"></script>
+  <script src="cabinet-4d70bc8a.js?v=20260830-1"></script>
 </body>
 </html>

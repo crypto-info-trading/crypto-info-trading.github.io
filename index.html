@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="ru">
+<html lang="ru" data-i18n-title="meta.title" data-i18n-meta-description="meta.description">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,33 +10,38 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Перейти к содержанию</a>
+  <a class="skip-link" href="#main" data-i18n="nav.skipLink">Перейти к содержанию</a>
   <div class="progress" aria-hidden="true"><span></span></div>
 
   <header class="site-header" data-header>
     <div class="container header-inner">
-      <a class="brand" href="#top" aria-label="CRYPTO INFO | TRADING — на главную">
+      <a class="brand" href="#top" data-i18n-aria="nav.brandAria" aria-label="CRYPTO INFO | TRADING — на главную">
         <img src="assets/logo-full.png" alt="CRYPTO INFO | TRADING">
       </a>
 
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Открыть меню">
+      <div class="lang-toggle" data-lang-toggle role="group" aria-label="Switch language / Переключить язык">
+        <button type="button" class="lang-btn" data-lang="ru">RU</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-i18n-aria="nav.menuOpenAria" aria-label="Открыть меню">
         <span></span><span></span>
       </button>
 
-      <nav class="site-nav" id="site-nav" aria-label="Основная навигация">
-        <a href="#about">О проекте</a>
-        <a href="#formats">Форматы</a>
-        <a href="#method">Подход</a>
-        <a href="#education">Обучение</a>
-        <a href="#author">Автор</a>
+      <nav class="site-nav" id="site-nav" data-i18n-aria="nav.ariaLabel" aria-label="Основная навигация">
+        <a href="#about" data-i18n="nav.about">О проекте</a>
+        <a href="#formats" data-i18n="nav.formats">Форматы</a>
+        <a href="#method" data-i18n="nav.method">Подход</a>
+        <a href="#education" data-i18n="nav.education">Обучение</a>
+        <a href="#author" data-i18n="nav.author">Автор</a>
         <a href="#bingx">BingX</a>
         <a href="#vip">VIP</a>
-        <a href="#socials">Соцсети</a>
-        <a href="#results">Живые результаты</a>
-        <a href="#contact">Связаться</a>
+        <a href="#socials" data-i18n="nav.socials">Соцсети</a>
+        <a href="#results" data-i18n="nav.results">Живые результаты</a>
+        <a href="#contact" data-i18n="nav.contact">Связаться</a>
       </nav>
 
-      <a class="button button-small header-cta" href="https://t.me/thecryptoinfotrading" target="_blank" rel="noopener noreferrer">
+      <a class="button button-small header-cta" href="https://t.me/thecryptoinfotrading" target="_blank" rel="noopener noreferrer" data-i18n="nav.cta">
         Открыть Telegram <span aria-hidden="true">↗︎</span>
       </a>
     </div>
@@ -50,21 +55,21 @@
 
       <div class="container hero-inner">
         <div class="hero-copy reveal">
-          <div class="eyebrow"><span></span> Аналитика рынка / живая торговля</div>
-          <h1>Меньше шума.<br><em>Больше сигнала.</em></h1>
-          <p>Авторский взгляд на рынок, понятные торговые сценарии и дисциплина риска — в одной системе.</p>
+          <div class="eyebrow" data-i18n="hero.eyebrow"><span></span> Аналитика рынка / живая торговля</div>
+          <h1 data-i18n="hero.title">Меньше шума.<br><em>Больше сигнала.</em></h1>
+          <p data-i18n="hero.lead">Авторский взгляд на рынок, понятные торговые сценарии и дисциплина риска — в одной системе.</p>
           <div class="hero-identity">
-            <div><span>Основатель и автор</span><strong>Alexey Pugachev</strong></div>
-            <div><span>Статус</span><strong>Официальный партнёр BingX</strong></div>
+            <div><span data-i18n="hero.identity.founderLabel">Основатель и автор</span><strong>Alexey Pugachev</strong></div>
+            <div><span data-i18n="hero.identity.statusLabel">Статус</span><strong data-i18n="hero.identity.statusValue">Официальный партнёр BingX</strong></div>
           </div>
           <div class="hero-actions">
-            <a class="button" href="https://t.me/thecryptoinfotrading" target="_blank" rel="noopener noreferrer">
+            <a class="button" href="https://t.me/thecryptoinfotrading" target="_blank" rel="noopener noreferrer" data-i18n="hero.actions.primary">
               Перейти в канал <span aria-hidden="true">↗︎</span>
             </a>
-            <a class="text-link" href="#method">Как устроен разбор <span aria-hidden="true">↓︎</span></a>
+            <a class="text-link" href="#method" data-i18n="hero.actions.secondary">Как устроен разбор <span aria-hidden="true">↓︎</span></a>
           </div>
-          <div class="signal-row" aria-label="Основные принципы проекта">
-            <span>Рынок</span><i></i><span>Сценарий</span><i></i><span>Риск</span><i></i><span>Действие</span>
+          <div class="signal-row" data-i18n-aria="hero.signalRow.ariaLabel" aria-label="Основные принципы проекта">
+            <span data-i18n="hero.signalRow.market">Рынок</span><i></i><span data-i18n="hero.signalRow.scenario">Сценарий</span><i></i><span data-i18n="hero.signalRow.risk">Риск</span><i></i><span data-i18n="hero.signalRow.action">Действие</span>
           </div>
         </div>
 
@@ -72,8 +77,8 @@
 
       <div class="market-strip" aria-hidden="true">
         <div class="market-strip-track">
-          <span>BTC / USD</span><b>СЦЕНАРИЙ</b><span>ETH / USD</span><b>РИСК</b><span>MARKET STRUCTURE</span><b>ЛИКВИДНОСТЬ</b>
-          <span>BTC / USD</span><b>СЦЕНАРИЙ</b><span>ETH / USD</span><b>РИСК</b><span>MARKET STRUCTURE</span><b>ЛИКВИДНОСТЬ</b>
+          <span>BTC / USD</span><b data-i18n="market.ticker.scenario">СЦЕНАРИЙ</b><span>ETH / USD</span><b data-i18n="market.ticker.risk">РИСК</b><span>MARKET STRUCTURE</span><b data-i18n="market.ticker.liquidity">ЛИКВИДНОСТЬ</b>
+          <span>BTC / USD</span><b data-i18n="market.ticker.scenario">СЦЕНАРИЙ</b><span>ETH / USD</span><b data-i18n="market.ticker.risk">РИСК</b><span>MARKET STRUCTURE</span><b data-i18n="market.ticker.liquidity">ЛИКВИДНОСТЬ</b>
         </div>
       </div>
     </section>
@@ -83,30 +88,30 @@
         <div class="section-heading reveal">
           <div class="section-number">01</div>
           <div>
-            <div class="eyebrow dark"><span></span> О проекте</div>
-            <h2>Система мышления,<br>а не поток сигналов</h2>
+            <div class="eyebrow dark" data-i18n="about.eyebrow"><span></span> О проекте</div>
+            <h2 data-i18n="about.title">Система мышления,<br>а не поток сигналов</h2>
           </div>
-          <p>Здесь важна не громкость прогноза, а логика решения: что происходит, почему это имеет значение и где сценарий перестаёт работать.</p>
+          <p data-i18n="about.lead">Здесь важна не громкость прогноза, а логика решения: что происходит, почему это имеет значение и где сценарий перестаёт работать.</p>
         </div>
 
         <div class="principles">
           <article class="principle-card reveal">
             <div class="card-index">01</div>
             <div class="card-icon chart-icon" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
-            <h3>Контекст</h3>
-            <p>Факты, уровни и структура рынка без перегруза терминологией.</p>
+            <h3 data-i18n="about.card1.title">Контекст</h3>
+            <p data-i18n="about.card1.desc">Факты, уровни и структура рынка без перегруза терминологией.</p>
           </article>
           <article class="principle-card featured reveal reveal-delay">
             <div class="card-index">02</div>
             <div class="card-icon route-icon" aria-hidden="true">↗︎</div>
-            <h3>Сценарий</h3>
-            <p>Условия входа, цели и понятная логика дальнейших действий.</p>
+            <h3 data-i18n="about.card2.title">Сценарий</h3>
+            <p data-i18n="about.card2.desc">Условия входа, цели и понятная логика дальнейших действий.</p>
           </article>
           <article class="principle-card reveal reveal-delay-2">
             <div class="card-index">03</div>
             <div class="card-icon shield-icon" aria-hidden="true">◇</div>
-            <h3>Риск</h3>
-            <p>Стоп, отмена идеи и размер позиции — часть каждого решения.</p>
+            <h3 data-i18n="about.card3.title">Риск</h3>
+            <p data-i18n="about.card3.desc">Стоп, отмена идеи и размер позиции — часть каждого решения.</p>
           </article>
         </div>
       </div>
@@ -117,42 +122,42 @@
         <div class="section-heading section-heading-dark reveal">
           <div class="section-number">02</div>
           <div>
-            <div class="eyebrow"><span></span> Контент-система</div>
-            <h2>Пять форматов.<br>Один визуальный код.</h2>
+            <div class="eyebrow" data-i18n="formats.eyebrow"><span></span> Контент-система</div>
+            <h2 data-i18n="formats.title">Пять форматов.<br>Один визуальный код.</h2>
           </div>
-          <p>Каждый материал сразу сообщает, что перед вами: аналитика, торговая идея, риск, новость или недельный итог.</p>
+          <p data-i18n="formats.lead">Каждый материал сразу сообщает, что перед вами: аналитика, торговая идея, риск, новость или недельный итог.</p>
         </div>
 
         <div class="format-grid">
           <article class="format-card reveal">
             <div class="format-top"><span>01</span><i class="dot green"></i></div>
-            <h3>Рынок</h3>
-            <p>Структура, импульс и ключевые уровни.</p>
+            <h3 data-i18n="formats.card1.title">Рынок</h3>
+            <p data-i18n="formats.card1.desc">Структура, импульс и ключевые уровни.</p>
             <div class="mini-chart" aria-hidden="true"><svg viewBox="0 0 240 80"><path d="M0 68L28 52L55 59L86 27L112 39L145 19L172 31L205 8L240 14"/></svg></div>
           </article>
           <article class="format-card reveal reveal-delay">
             <div class="format-top"><span>02</span><i class="dot lime"></i></div>
-            <h3>Сценарий</h3>
-            <p>Вход, отмена идеи и возможные цели.</p>
+            <h3 data-i18n="formats.card2.title">Сценарий</h3>
+            <p data-i18n="formats.card2.desc">Вход, отмена идеи и возможные цели.</p>
             <div class="level-bars" aria-hidden="true"><span></span><span></span><span></span></div>
           </article>
           <article class="format-card reveal reveal-delay-2">
             <div class="format-top"><span>03</span><i class="dot red"></i></div>
-            <h3>Риск</h3>
-            <p>Ликвидность, плечо и защита позиции.</p>
+            <h3 data-i18n="formats.card3.title">Риск</h3>
+            <p data-i18n="formats.card3.desc">Ликвидность, плечо и защита позиции.</p>
             <div class="risk-scale" aria-hidden="true"><span></span></div>
           </article>
           <article class="format-card reveal">
             <div class="format-top"><span>04</span><i class="dot white"></i></div>
-            <h3>Новости</h3>
-            <p>Не просто событие, а его значение для трейдера.</p>
+            <h3 data-i18n="formats.card4.title">Новости</h3>
+            <p data-i18n="formats.card4.desc">Не просто событие, а его значение для трейдера.</p>
             <div class="news-lines" aria-hidden="true"><span></span><span></span><span></span></div>
           </article>
           <article class="format-card wide reveal reveal-delay">
             <div class="format-top"><span>05</span><i class="dot gold"></i></div>
-            <h3>Итоги недели</h3>
-            <p>Что сработало, что изменилось и где искать следующий сетап.</p>
-            <div class="week-stats" aria-hidden="true"><span>ПН</span><i></i><span>СР</span><i></i><span>ПТ</span></div>
+            <h3 data-i18n="formats.card5.title">Итоги недели</h3>
+            <p data-i18n="formats.card5.desc">Что сработало, что изменилось и где искать следующий сетап.</p>
+            <div class="week-stats" aria-hidden="true"><span data-i18n="formats.card5.mon">ПН</span><i></i><span data-i18n="formats.card5.wed">СР</span><i></i><span data-i18n="formats.card5.fri">ПТ</span></div>
           </article>
         </div>
       </div>
@@ -161,8 +166,8 @@
     <section class="manifesto">
       <div class="container manifesto-inner reveal">
         <img src="assets/logo-icon.png" alt="" aria-hidden="true">
-        <blockquote>«Факт без вывода — просто шум.<br><em>Вывод без риска — просто мнение.</em>»</blockquote>
-        <div class="manifesto-label">Принцип CRYPTO INFO</div>
+        <blockquote data-i18n="manifesto.quote">«Факт без вывода — просто шум.<br><em>Вывод без риска — просто мнение.</em>»</blockquote>
+        <div class="manifesto-label" data-i18n="manifesto.label">Принцип CRYPTO INFO</div>
       </div>
     </section>
 
@@ -171,19 +176,19 @@
         <div class="section-heading reveal">
           <div class="section-number">03</div>
           <div>
-            <div class="eyebrow dark"><span></span> Метод</div>
-            <h2>От факта<br>к решению</h2>
+            <div class="eyebrow dark" data-i18n="method.eyebrow"><span></span> Метод</div>
+            <h2 data-i18n="method.title">От факта<br>к решению</h2>
           </div>
-          <p>Каждый разбор проходит одну и ту же проверяемую цепочку. Это помогает отделять эмоцию от торгового плана.</p>
+          <p data-i18n="method.lead">Каждый разбор проходит одну и ту же проверяемую цепочку. Это помогает отделять эмоцию от торгового плана.</p>
         </div>
 
         <ol class="method-flow">
-          <li class="reveal"><span>01</span><b>Крючок</b><small>Что требует внимания</small></li>
-          <li class="reveal"><span>02</span><b>Факт</b><small>Что произошло</small></li>
-          <li class="reveal"><span>03</span><b>Значение</b><small>Почему это важно</small></li>
-          <li class="reveal"><span>04</span><b>Сценарий</b><small>Что можно делать</small></li>
-          <li class="reveal"><span>05</span><b>Риск</b><small>Где идея отменяется</small></li>
-          <li class="reveal"><span>06</span><b>Действие</b><small>Следующий шаг</small></li>
+          <li class="reveal"><span>01</span><b data-i18n="method.step1.title">Крючок</b><small data-i18n="method.step1.desc">Что требует внимания</small></li>
+          <li class="reveal"><span>02</span><b data-i18n="method.step2.title">Факт</b><small data-i18n="method.step2.desc">Что произошло</small></li>
+          <li class="reveal"><span>03</span><b data-i18n="method.step3.title">Значение</b><small data-i18n="method.step3.desc">Почему это важно</small></li>
+          <li class="reveal"><span>04</span><b data-i18n="method.step4.title">Сценарий</b><small data-i18n="method.step4.desc">Что можно делать</small></li>
+          <li class="reveal"><span>05</span><b data-i18n="method.step5.title">Риск</b><small data-i18n="method.step5.desc">Где идея отменяется</small></li>
+          <li class="reveal"><span>06</span><b data-i18n="method.step6.title">Действие</b><small data-i18n="method.step6.desc">Следующий шаг</small></li>
         </ol>
       </div>
     </section>
@@ -196,10 +201,10 @@
           <div class="section-heading section-heading-dark reveal">
             <div class="section-number">04</div>
             <div>
-              <div class="eyebrow"><span></span> Авторское обучение</div>
-              <h2>От первых шагов<br><em>до уровня PRO</em></h2>
+              <div class="eyebrow" data-i18n="education.eyebrow"><span></span> Авторское обучение</div>
+              <h2 data-i18n="education.title">От первых шагов<br><em>до уровня PRO</em></h2>
             </div>
-            <p>Системная программа Alexey Pugachev о работе на рынке, построении прибыли и контроле рисков — с поддержкой на каждом этапе.</p>
+            <p data-i18n="education.lead">Системная программа Alexey Pugachev о работе на рынке, построении прибыли и контроле рисков — с поддержкой на каждом этапе.</p>
           </div>
           <div class="heading-photo reveal reveal-delay">
             <img src="assets/tab-obuchenie.jpg" alt="Обучение с Alexey Pugachev — CRYPTO INFO | TRADING" loading="lazy">
@@ -210,31 +215,31 @@
           <article class="education-card reveal">
             <div class="education-card-head">
               <span class="education-index">01 / VIDEO</span>
-              <span class="education-format">С куратором</span>
+              <span class="education-format" data-i18n="education.card1.format">С куратором</span>
             </div>
             <h3>TRADER<br><em>с 0 до PRO 3.0</em></h3>
-            <p class="education-lead">Авторское модульное обучение, выстроенное от базовых знаний до профессионального уровня.</p>
-            <div class="education-stats" aria-label="Состав программы">
-              <div><strong>5</strong><span>модулей</span></div>
-              <div><strong>55</strong><span>видеоуроков</span></div>
+            <p class="education-lead" data-i18n="education.card1.lead">Авторское модульное обучение, выстроенное от базовых знаний до профессионального уровня.</p>
+            <div class="education-stats" data-i18n-aria="education.statsAria1" aria-label="Состав программы">
+              <div><strong>5</strong><span data-i18n="education.card1.stat1Label">модулей</span></div>
+              <div><strong>55</strong><span data-i18n="education.card1.stat2Label">видеоуроков</span></div>
             </div>
             <ul class="education-list">
-              <li>Обучение в закрытом Telegram-чате</li>
-              <li>Сопровождение действующего куратора</li>
-              <li>Неограниченная по времени поддержка во время и после обучения</li>
-              <li>Практика работы, построения прибыли и контроля рисков</li>
+              <li data-i18n="education.card1.list1">Обучение в закрытом Telegram-чате</li>
+              <li data-i18n="education.card1.list2">Сопровождение действующего куратора</li>
+              <li data-i18n="education.card1.list3">Неограниченная по времени поддержка во время и после обучения</li>
+              <li data-i18n="education.card1.list4">Практика работы, построения прибыли и контроля рисков</li>
             </ul>
-            <div class="education-price" aria-label="Стоимость тарифа">
-              <span class="education-price-old">1 500 USDT</span>
-              <strong>999 USDT</strong>
-              <small>Специальная стоимость</small>
+            <div class="education-price" data-i18n-aria="education.priceAria" aria-label="Стоимость тарифа">
+              <span class="education-price-old">1 000 USDT</span>
+              <strong>749 USDT</strong>
+              <small data-i18n="education.priceLabel1">Специальная стоимость</small>
             </div>
             <div class="education-actions">
               <div class="education-status" role="status">
                 <span class="education-status-dot" aria-hidden="true"></span>
                 <span class="education-status-text">
-                  <b>Приём временно закрыт</b>
-                  <small>Дозаписываем программу — скоро откроем набор</small>
+                  <b data-i18n="education.status.title">Приём временно закрыт</b>
+                  <small data-i18n="education.status.desc">Дозаписываем программу — скоро откроем набор</small>
                 </span>
               </div>
             </div>
@@ -243,101 +248,101 @@
           <article class="education-card education-card-featured reveal reveal-delay">
             <div class="education-card-head">
               <span class="education-index">02 / LIVE</span>
-              <span class="education-format">Индивидуально</span>
+              <span class="education-format" data-i18n="education.card2.format">Индивидуально</span>
             </div>
             <h3>Индивидуальный<br><em>PRO 3.0</em></h3>
-            <p class="education-lead">Полная программа PRO 3.0 в персональном формате: все уроки проходят онлайн на живых созвонах.</p>
-            <div class="education-stats" aria-label="Формат программы">
-              <div><strong>1:1</strong><span>формат</span></div>
-              <div><strong>LIVE</strong><span>онлайн-созвоны</span></div>
+            <p class="education-lead" data-i18n="education.card2.lead">Полная программа PRO 3.0 в персональном формате: все уроки проходят онлайн на живых созвонах.</p>
+            <div class="education-stats" data-i18n-aria="education.statsAria2" aria-label="Формат программы">
+              <div><strong>1:1</strong><span data-i18n="education.card2.stat1Label">формат</span></div>
+              <div><strong>LIVE</strong><span data-i18n="education.card2.stat2Label">онлайн-созвоны</span></div>
             </div>
             <ul class="education-list">
-              <li>Индивидуальное прохождение всех тем программы</li>
-              <li>Живые онлайн-занятия и разбор вопросов</li>
-              <li>Персональная обратная связь и поддержка без ограничения по времени</li>
-              <li>Фокус на работе, прибыли и системном контроле рисков</li>
+              <li data-i18n="education.card2.list1">Индивидуальное прохождение всех тем программы</li>
+              <li data-i18n="education.card2.list2">Живые онлайн-занятия и разбор вопросов</li>
+              <li data-i18n="education.card2.list3">Персональная обратная связь и поддержка без ограничения по времени</li>
+              <li data-i18n="education.card2.list4">Фокус на работе, прибыли и системном контроле рисков</li>
             </ul>
-            <div class="education-price" aria-label="Стоимость тарифа">
-              <span class="education-price-old">2 000 USDT</span>
-              <strong>1 499 USDT</strong>
-              <small>Индивидуальный формат</small>
+            <div class="education-price" data-i18n-aria="education.priceAria" aria-label="Стоимость тарифа">
+              <span class="education-price-old">1 500 USDT</span>
+              <strong>999 USDT</strong>
+              <small data-i18n="education.priceLabel2">Индивидуальный формат</small>
             </div>
             <div class="education-actions">
               <div class="education-status" role="status">
                 <span class="education-status-dot" aria-hidden="true"></span>
                 <span class="education-status-text">
-                  <b>Приём временно закрыт</b>
-                  <small>Дозаписываем программу — скоро откроем набор</small>
+                  <b data-i18n="education.status.title">Приём временно закрыт</b>
+                  <small data-i18n="education.status.desc">Дозаписываем программу — скоро откроем набор</small>
                 </span>
               </div>
             </div>
           </article>
         </div>
 
-        <aside class="education-aftercare reveal" aria-label="Поддержка после обучения">
+        <aside class="education-aftercare reveal" data-i18n-aria="education.aftercareAria" aria-label="Поддержка после обучения">
           <span class="education-aftercare-mark" aria-hidden="true">→︎</span>
           <div>
-            <small>Путь продолжается</small>
-            <p>Каждый ученик после обучения никогда не остаётся один. Настоящее начало пути открывается после завершения программы — в закрытом VIP Community для трейдеров.</p>
+            <small data-i18n="education.aftercare.label">Путь продолжается</small>
+            <p data-i18n="education.aftercare.text">Каждый ученик после обучения никогда не остаётся один. Настоящее начало пути открывается после завершения программы — в закрытом VIP Community для трейдеров.</p>
           </div>
-          <a class="text-link" href="#vip">Перейти к VIP Community <span aria-hidden="true">↓︎</span></a>
+          <a class="text-link" href="#vip" data-i18n="education.aftercare.cta">Перейти к VIP Community <span aria-hidden="true">↓︎</span></a>
         </aside>
 
-        <div class="education-reviews reveal" aria-label="Отзывы учеников">
-          <span class="education-reviews-label">Живые отзывы учеников</span>
+        <div class="education-reviews reveal" data-i18n-aria="education.reviewsAria" aria-label="Отзывы учеников">
+          <span class="education-reviews-label" data-i18n="education.reviews.label">Живые отзывы учеников</span>
           <div class="education-reviews-grid">
             <blockquote class="testimonial-card testimonial-card-compact">
-              <p>«Обучение классное, всё доходчиво объясняют в свободной форме, без воды и заумных слов — простым языком для любого уровня знаний. Материал полезный: от стратегий до контроля эмоций.»</p>
-              <cite>Вадим Логутов<span>Отзыв в Telegram</span></cite>
+              <p data-i18n="testimonial.vadim">«Обучение классное, всё доходчиво объясняют в свободной форме, без воды и заумных слов — простым языком для любого уровня знаний. Материал полезный: от стратегий до контроля эмоций.»</p>
+              <cite>Вадим Логутов<span data-i18n="testimonial.sourceLabel">Отзыв в Telegram</span></cite>
             </blockquote>
             <blockquote class="testimonial-card testimonial-card-compact">
-              <p>«Обучение длилось 4 месяца, и они пролетели незаметно. Лёша объяснял всё по несколько раз — у него большой талант и настоящее стремление обучать и помогать людям. Позже я сам стал частью команды.»</p>
-              <cite>Revan_BingX<span>Отзыв в Telegram</span></cite>
+              <p data-i18n="testimonial.revan">«Обучение длилось 4 месяца, и они пролетели незаметно. Лёша объяснял всё по несколько раз — у него большой талант и настоящее стремление обучать и помогать людям. Позже я сам стал частью команды.»</p>
+              <cite>Revan_BingX<span data-i18n="testimonial.sourceLabel">Отзыв в Telegram</span></cite>
             </blockquote>
             <blockquote class="testimonial-card testimonial-card-compact">
-              <p>«Хочу поблагодарить от души за шикарное обучение. Всё подробно, доступно и без лишней воды — только то, что реально работает. Объясняет снова и снова, пока не поймёшь. Я был полным нулём, а теперь вместе с командой зарабатываю на рынке.»</p>
-              <cite>Александр Никитин<span>Отзыв в Telegram</span></cite>
+              <p data-i18n="testimonial.alexandr">«Хочу поблагодарить от души за шикарное обучение. Всё подробно, доступно и без лишней воды — только то, что реально работает. Объясняет снова и снова, пока не поймёшь. Я был полным нулём, а теперь вместе с командой зарабатываю на рынке.»</p>
+              <cite>Александр Никитин<span data-i18n="testimonial.sourceLabel">Отзыв в Telegram</span></cite>
             </blockquote>
             <blockquote class="testimonial-card testimonial-card-compact">
-              <p>«Пришёл на курс с нулевыми знаниями о крипте. Обучение подробное, с повторением по всем темам и ответами на все вопросы. Спустя три месяца уже открываю свои сделки и делаю прибыль. Очень помогает комьюнити и сделки от самого Лёши.»</p>
-              <cite>Владислав<span>Отзыв в Telegram</span></cite>
+              <p data-i18n="testimonial.vladislav">«Пришёл на курс с нулевыми знаниями о крипте. Обучение подробное, с повторением по всем темам и ответами на все вопросы. Спустя три месяца уже открываю свои сделки и делаю прибыль. Очень помогает комьюнити и сделки от самого Лёши.»</p>
+              <cite>Владислав<span data-i18n="testimonial.sourceLabel">Отзыв в Telegram</span></cite>
             </blockquote>
             <blockquote class="testimonial-card testimonial-card-compact">
-              <p>«С самого начала Лёха выделялся — писал чётко, по делу, без воды. Сначала просто тестировал его идеи, и они начали приносить результат — тогда решился на обучение. До этого знания о рынке были полным хаосом, а теперь всё разложено по полочкам.»</p>
-              <cite>Gunzi_Stone<span>Отзыв в Telegram</span></cite>
+              <p data-i18n="testimonial.gunzi">«С самого начала Лёха выделялся — писал чётко, по делу, без воды. Сначала просто тестировал его идеи, и они начали приносить результат — тогда решился на обучение. До этого знания о рынке были полным хаосом, а теперь всё разложено по полочкам.»</p>
+              <cite>Gunzi_Stone<span data-i18n="testimonial.sourceLabel">Отзыв в Telegram</span></cite>
             </blockquote>
             <blockquote class="testimonial-card testimonial-card-compact">
-              <p>«Я кайфую от обучения. Обстановка комфортная, информация воспринимается легко. Нравится, что всегда возвращаемся к повторению предыдущих тем — новый материал прогоняем не один раз, это реально помогает. Ещё супер мотивирует хороший фидбэк по домашкам.»</p>
-              <cite>Ксюша<span>Отзыв в Telegram</span></cite>
+              <p data-i18n="testimonial.ksyusha">«Я кайфую от обучения. Обстановка комфортная, информация воспринимается легко. Нравится, что всегда возвращаемся к повторению предыдущих тем — новый материал прогоняем не один раз, это реально помогает. Ещё супер мотивирует хороший фидбэк по домашкам.»</p>
+              <cite>Ксюша<span data-i18n="testimonial.sourceLabel">Отзыв в Telegram</span></cite>
             </blockquote>
           </div>
-          <a class="text-link education-reviews-more" href="https://t.me/cryptoinfoprime" target="_blank" rel="noopener noreferrer">Читать больше отзывов <span aria-hidden="true">↗︎</span></a>
+          <a class="text-link education-reviews-more" href="https://t.me/cryptoinfoprime" target="_blank" rel="noopener noreferrer" data-i18n="education.reviews.more">Читать больше отзывов <span aria-hidden="true">↗︎</span></a>
         </div>
 
-        <p class="education-note reveal"><span>!</span> Оплата доступна только в USDT. Перед переводом обязательно проверьте выбранную сеть.</p>
+        <p class="education-note reveal"><span>!</span> <span data-i18n="education.note">Оплата доступна только в USDT. Перед переводом обязательно проверьте выбранную сеть.</span></p>
       </div>
 
       <div class="payment-modal" data-payment-modal aria-hidden="true">
         <div class="payment-backdrop" data-payment-close aria-hidden="true"></div>
         <section class="payment-dialog" role="dialog" aria-modal="true" aria-labelledby="payment-title">
-          <button class="payment-close" type="button" data-payment-close aria-label="Закрыть окно оплаты">×</button>
+          <button class="payment-close" type="button" data-payment-close data-i18n-aria="payment.closeAria" aria-label="Закрыть окно оплаты">×</button>
 
           <div class="payment-summary">
             <span class="payment-kicker">SECURE USDT PAYMENT</span>
-            <h3 id="payment-title">Оплата обучения</h3>
+            <h3 id="payment-title" data-i18n="payment.title">Оплата обучения</h3>
             <p class="payment-plan-name" data-payment-plan-name>TRADER с 0 до PRO 3.0</p>
             <div class="payment-price">
               <span data-payment-old-price>1 500 USDT</span>
               <strong data-payment-price>999 USDT</strong>
             </div>
 
-            <div class="payment-steps" aria-label="Порядок оплаты">
-              <span><b>01</b> Выберите сеть</span>
-              <span><b>02</b> Переведите точную сумму</span>
-              <span><b>03</b> Отправьте TXID и скриншот</span>
+            <div class="payment-steps" data-i18n-aria="payment.stepsAria" aria-label="Порядок оплаты">
+              <span data-i18n="payment.step1"><b>01</b> Выберите сеть</span>
+              <span data-i18n="payment.step2"><b>02</b> Переведите точную сумму</span>
+              <span data-i18n="payment.step3"><b>03</b> Отправьте TXID и скриншот</span>
             </div>
 
-            <div class="payment-networks" role="group" aria-label="Выберите сеть USDT">
+            <div class="payment-networks" role="group" data-i18n-aria="payment.networksAria" aria-label="Выберите сеть USDT">
               <button type="button" data-payment-network="trc20">TRC20<small>TRON</small></button>
               <button type="button" data-payment-network="bep20">BEP20<small>BNB Chain</small></button>
               <button type="button" data-payment-network="erc20">ERC20<small>Ethereum</small></button>
@@ -352,7 +357,7 @@
               <div class="payment-address">
                 <small data-payment-network-label>USDT · TRC20</small>
                 <code data-payment-address>TFxyrMF5ArA4zmWMhLM5ibPCMNEZyV9Qjz</code>
-                <button type="button" data-payment-copy>Скопировать адрес</button>
+                <button type="button" data-payment-copy data-i18n="payment.copyAddress">Скопировать адрес</button>
               </div>
             </div>
 
@@ -370,43 +375,43 @@
             <input type="hidden" name="Адрес получателя" data-payment-form-address value="TFxyrMF5ArA4zmWMhLM5ibPCMNEZyV9Qjz">
 
             <div class="payment-proof-head">
-              <span>ПОДТВЕРЖДЕНИЕ ПЕРЕВОДА</span>
-              <h4>Отправьте данные для проверки</h4>
-              <p>После отправки формы откроется личный Telegram Alexey Pugachev.</p>
+              <span data-i18n="payment.proofHead.kicker">ПОДТВЕРЖДЕНИЕ ПЕРЕВОДА</span>
+              <h4 data-i18n="payment.proofHead.title">Отправьте данные для проверки</h4>
+              <p data-i18n="payment.proofHead.desc">После отправки формы откроется личный Telegram Alexey Pugachev.</p>
             </div>
 
             <label class="payment-field">
-              <span>Ваш Telegram username</span>
+              <span data-i18n="payment.field.telegram">Ваш Telegram username</span>
               <input type="text" name="Telegram" placeholder="@username" minlength="5" maxlength="33" required autocomplete="off">
             </label>
 
             <label class="payment-field">
-              <span>TXID / хеш транзакции</span>
-              <input type="text" name="TXID" placeholder="Вставьте идентификатор перевода" minlength="12" maxlength="140" required autocomplete="off">
+              <span data-i18n="payment.field.txid">TXID / хеш транзакции</span>
+              <input type="text" name="TXID" placeholder="Вставьте идентификатор перевода" data-i18n-placeholder="payment.field.txidPlaceholder" minlength="12" maxlength="140" required autocomplete="off">
             </label>
 
             <label class="payment-file">
-              <span>Скриншот перевода <b>обязательно</b></span>
+              <span data-i18n="payment.field.screenshotLabel">Скриншот перевода <b>обязательно</b></span>
               <input type="file" name="attachment" accept="image/png,image/jpeg,image/webp" required data-payment-file>
               <span class="payment-file-ui">
-                <strong data-payment-file-name>Выбрать PNG, JPG или WEBP</strong>
-                <small>Не более 10 МБ</small>
+                <strong data-payment-file-name data-i18n="payment.field.fileDefault">Выбрать PNG, JPG или WEBP</strong>
+                <small data-i18n="payment.field.fileHint">Не более 10 МБ</small>
               </span>
             </label>
 
             <label class="payment-field">
-              <span>Комментарий <small>необязательно</small></span>
-              <textarea name="Комментарий" rows="3" placeholder="Имя отправителя или дополнительная информация"></textarea>
+              <span data-i18n="payment.field.comment">Комментарий <small>необязательно</small></span>
+              <textarea name="Комментарий" rows="3" placeholder="Имя отправителя или дополнительная информация" data-i18n-placeholder="payment.field.commentPlaceholder"></textarea>
             </label>
 
             <label class="payment-consent">
               <input type="checkbox" name="Согласие на обработку данных" value="Да" required>
-              <span>Согласен на передачу платёжных данных и скриншота через FormSubmit для проверки оплаты.</span>
+              <span data-i18n="payment.consent">Согласен на передачу платёжных данных и скриншота через FormSubmit для проверки оплаты.</span>
             </label>
 
             <p class="payment-form-error" data-payment-error role="alert"></p>
-            <button class="button button-large payment-submit" type="submit">Отправить подтверждение <span aria-hidden="true">→︎</span></button>
-            <small class="payment-privacy">Никогда не отправляйте seed-фразу, пароль или приватный ключ.</small>
+            <button class="button button-large payment-submit" type="submit" data-i18n="payment.submit">Отправить подтверждение <span aria-hidden="true">→︎</span></button>
+            <small class="payment-privacy" data-i18n="payment.privacyNote">Никогда не отправляйте seed-фразу, пароль или приватный ключ.</small>
           </form>
         </section>
       </div>
@@ -420,18 +425,18 @@
           <div class="avatar-caption"><span>FOUNDER / AUTHOR</span><b>Alexey Pugachev</b></div>
         </div>
         <div class="author-copy reveal reveal-delay">
-          <div class="eyebrow"><span></span> Основатель и автор</div>
+          <div class="eyebrow" data-i18n="author.eyebrow"><span></span> Основатель и автор</div>
           <h2>Alexey<br><em>Pugachev</em></h2>
-          <div class="author-role">Основатель CRYPTO INFO | TRADING<br>и официальный партнёр биржи BingX</div>
-          <p>Личный рыночный комментарий, прозрачная логика сценариев и дисциплина риска превращают поток информации в понятную систему действий.</p>
+          <div class="author-role" data-i18n="author.role">Основатель CRYPTO INFO | TRADING<br>и официальный партнёр биржи BingX</div>
+          <p data-i18n="author.lead">Личный рыночный комментарий, прозрачная логика сценариев и дисциплина риска превращают поток информации в понятную систему действий.</p>
           <div class="author-points">
-            <span><i>✓</i> Прямой язык</span>
-            <span><i>✓</i> Прозрачная логика</span>
-            <span><i>✓</i> Риск до результата</span>
+            <span data-i18n="author.point1"><i>✓</i> Прямой язык</span>
+            <span data-i18n="author.point2"><i>✓</i> Прозрачная логика</span>
+            <span data-i18n="author.point3"><i>✓</i> Риск до результата</span>
           </div>
           <div class="author-actions">
-            <a class="button" href="https://t.me/thecryptoinfotrading" target="_blank" rel="noopener noreferrer">Читать канал <span aria-hidden="true">↗︎</span></a>
-            <a class="text-link" href="#bingx">Партнёрство BingX <span aria-hidden="true">↓︎</span></a>
+            <a class="button" href="https://t.me/thecryptoinfotrading" target="_blank" rel="noopener noreferrer" data-i18n="author.actions.primary">Читать канал <span aria-hidden="true">↗︎</span></a>
+            <a class="text-link" href="#bingx" data-i18n="author.actions.secondary">Партнёрство BingX <span aria-hidden="true">↓︎</span></a>
           </div>
         </div>
       </div>
@@ -441,21 +446,21 @@
       <div class="partner-aura" aria-hidden="true"></div>
       <div class="container partner-inner">
         <div class="partner-copy reveal">
-          <div class="eyebrow"><span></span> Официальное партнёрство</div>
+          <div class="eyebrow" data-i18n="partner.eyebrow"><span></span> Официальное партнёрство</div>
           <div class="partner-mark">
             <span>CRYPTO INFO</span>
             <i>×</i>
             <span class="bingx-lockup"><img class="bingx-icon" src="assets/bingx-logo.png" alt=""><img class="bingx-wordmark" src="assets/bingx-wordmark.png" alt="BingX"></span>
           </div>
-          <h2>Торговая инфраструктура<br><em>для участников сообщества</em></h2>
-          <p>Alexey Pugachev и CRYPTO INFO | TRADING являются официальными партнёрами BingX. Партнёрская регистрация — первый шаг для доступа в закрытое VIP Community.</p>
-          <a class="button button-large" href="https://bingx.com/ru/partner/cryptoinfotrading" target="_blank" rel="noopener noreferrer">Зарегистрироваться на BingX <span aria-hidden="true">↗︎</span></a>
+          <h2 data-i18n="partner.title">Торговая инфраструктура<br><em>для участников сообщества</em></h2>
+          <p data-i18n="partner.lead">Alexey Pugachev и CRYPTO INFO | TRADING являются официальными партнёрами BingX. Партнёрская регистрация — первый шаг для доступа в закрытое VIP Community.</p>
+          <a class="button button-large" href="https://bingx.com/ru/partner/cryptoinfotrading" target="_blank" rel="noopener noreferrer" data-i18n="partner.cta">Зарегистрироваться на BingX <span aria-hidden="true">↗︎</span></a>
         </div>
-        <aside class="partner-card reveal reveal-delay" aria-label="Статус партнёрства BingX">
+        <aside class="partner-card reveal reveal-delay" data-i18n-aria="partner.cardAria" aria-label="Статус партнёрства BingX">
           <div class="partner-card-top"><span>OFFICIAL</span><span>PARTNER</span></div>
           <div class="partner-x"><img class="bingx-icon" src="assets/bingx-logo.png" alt=""><img class="bingx-wordmark" src="assets/bingx-wordmark.png" alt="Логотип BingX"></div>
           <div class="partner-line"></div>
-          <p>Партнёрская ссылка<br>CRYPTO INFO | TRADING</p>
+          <p data-i18n="partner.cardText">Партнёрская ссылка<br>CRYPTO INFO | TRADING</p>
           <span class="partner-code">/cryptoinfotrading</span>
         </aside>
       </div>
@@ -466,36 +471,36 @@
         <div class="section-heading section-heading-dark reveal">
           <div class="section-number">05</div>
           <div>
-            <div class="eyebrow"><span></span> Закрытое сообщество</div>
-            <h2>VIP Community<br><em>для трейдеров</em></h2>
+            <div class="eyebrow" data-i18n="vip.eyebrow"><span></span> Закрытое сообщество</div>
+            <h2 data-i18n="vip.title">VIP Community<br><em>для трейдеров</em></h2>
           </div>
-          <p>Среда для тех, кто хочет торговать не в одиночку: видеть пульс рынка, обсуждать идеи и работать по понятным сценариям.</p>
+          <p data-i18n="vip.lead">Среда для тех, кто хочет торговать не в одиночку: видеть пульс рынка, обсуждать идеи и работать по понятным сценариям.</p>
         </div>
 
         <div class="vip-benefits">
-          <article class="vip-card reveal"><span>01</span><h3>Умные сигналы</h3><p>Ежедневные рекомендации для фьючерсов — быстро, чётко и по делу.</p></article>
-          <article class="vip-card reveal reveal-delay"><span>02</span><h3>Пульс рынка</h3><p>Оперативные сводки и актуальные точки внимания для трейдера.</p></article>
-          <article class="vip-card reveal reveal-delay-2"><span>03</span><h3>Гибкие стратегии</h3><p>Сценарии для спота, среднесрока и разных торговых горизонтов.</p></article>
-          <article class="vip-card reveal"><span>04</span><h3>Закрытый чат</h3><p>Общение с единомышленниками, обмен идеями и живое комьюнити.</p></article>
-          <article class="vip-card reveal reveal-delay"><span>05</span><h3>Торговля вместе</h3><p>Совместный скальпинг, сопровождение по сделкам и поддержка команды.</p></article>
-          <article class="vip-card reveal reveal-delay-2"><span>06</span><h3>Бонусы BingX</h3><p>Скидки на комиссии, перенос VIP-статуса и регулярные активности.</p></article>
+          <article class="vip-card reveal"><span>01</span><h3 data-i18n="vip.card1.title">Умные сигналы</h3><p data-i18n="vip.card1.desc">Ежедневные рекомендации для фьючерсов — быстро, чётко и по делу.</p></article>
+          <article class="vip-card reveal reveal-delay"><span>02</span><h3 data-i18n="vip.card2.title">Пульс рынка</h3><p data-i18n="vip.card2.desc">Оперативные сводки и актуальные точки внимания для трейдера.</p></article>
+          <article class="vip-card reveal reveal-delay-2"><span>03</span><h3 data-i18n="vip.card3.title">Гибкие стратегии</h3><p data-i18n="vip.card3.desc">Сценарии для спота, среднесрока и разных торговых горизонтов.</p></article>
+          <article class="vip-card reveal"><span>04</span><h3 data-i18n="vip.card4.title">Закрытый чат</h3><p data-i18n="vip.card4.desc">Общение с единомышленниками, обмен идеями и живое комьюнити.</p></article>
+          <article class="vip-card reveal reveal-delay"><span>05</span><h3 data-i18n="vip.card5.title">Торговля вместе</h3><p data-i18n="vip.card5.desc">Совместный скальпинг, сопровождение по сделкам и поддержка команды.</p></article>
+          <article class="vip-card reveal reveal-delay-2"><span>06</span><h3 data-i18n="vip.card6.title">Бонусы BingX</h3><p data-i18n="vip.card6.desc">Скидки на комиссии, перенос VIP-статуса и регулярные активности.</p></article>
         </div>
 
         <div class="join-panel reveal">
           <div class="join-copy">
-            <div class="eyebrow"><span></span> Как присоединиться</div>
-            <h3>Три шага до закрытого сообщества</h3>
-            <p>Условие вступления — регистрация на BingX по партнёрской ссылке CRYPTO INFO | TRADING.</p>
+            <div class="eyebrow" data-i18n="join.eyebrow"><span></span> Как присоединиться</div>
+            <h3 data-i18n="join.title">Три шага до закрытого сообщества</h3>
+            <p data-i18n="join.lead">Условие вступления — регистрация на BingX по партнёрской ссылке CRYPTO INFO | TRADING.</p>
           </div>
           <ol class="join-steps">
-            <li><span>01</span><div><b>Регистрация</b><small>Создайте аккаунт BingX по официальной партнёрской ссылке.</small></div></li>
-            <li><span>02</span><div><b>Ваш UID</b><small>Скопируйте идентификатор пользователя в личном кабинете BingX.</small></div></li>
-            <li><span>03</span><div><b>Проверка доступа</b><small>Отправьте UID в Telegram-бот VIP Community.</small></div></li>
+            <li><span>01</span><div><b data-i18n="join.step1.title">Регистрация</b><small data-i18n="join.step1.desc">Создайте аккаунт BingX по официальной партнёрской ссылке.</small></div></li>
+            <li><span>02</span><div><b data-i18n="join.step2.title">Ваш UID</b><small data-i18n="join.step2.desc">Скопируйте идентификатор пользователя в личном кабинете BingX.</small></div></li>
+            <li><span>03</span><div><b data-i18n="join.step3.title">Проверка доступа</b><small data-i18n="join.step3.desc">Отправьте UID в Telegram-бот VIP Community.</small></div></li>
           </ol>
           <div class="join-actions">
-            <a class="button" href="https://bingx.com/ru/partner/cryptoinfotrading" target="_blank" rel="noopener noreferrer">Регистрация на BingX <span aria-hidden="true">↗︎</span></a>
-            <a class="button button-outline" href="https://t.me/vipcommunitybingx_bot" target="_blank" rel="noopener noreferrer">Отправить UID в бот <span aria-hidden="true">↗︎</span></a>
-            <a class="text-link" href="https://t.me/thecryptoinfotrading/14229" target="_blank" rel="noopener noreferrer">Оригинальный пост <span aria-hidden="true">↗︎</span></a>
+            <a class="button" href="https://bingx.com/ru/partner/cryptoinfotrading" target="_blank" rel="noopener noreferrer" data-i18n="join.action1">Регистрация на BingX <span aria-hidden="true">↗︎</span></a>
+            <a class="button button-outline" href="https://t.me/vipcommunitybingx_bot" target="_blank" rel="noopener noreferrer" data-i18n="join.action2">Отправить UID в бот <span aria-hidden="true">↗︎</span></a>
+            <a class="text-link" href="https://t.me/thecryptoinfotrading/14229" target="_blank" rel="noopener noreferrer" data-i18n="join.action3">Оригинальный пост <span aria-hidden="true">↗︎</span></a>
           </div>
         </div>
       </div>
@@ -508,18 +513,18 @@
         <div class="section-heading section-heading-dark reveal">
           <div class="section-number">06</div>
           <div>
-            <div class="eyebrow"><span></span> Медиа и соцсети</div>
-            <h2>Рынок — в видео.<br><em>Личность — в кадре.</em></h2>
+            <div class="eyebrow" data-i18n="socials.eyebrow"><span></span> Медиа и соцсети</div>
+            <h2 data-i18n="socials.title">Рынок — в видео.<br><em>Личность — в кадре.</em></h2>
           </div>
-          <p>Подписывайтесь на площадки Alexey Pugachev: новые рыночные разборы на YouTube и личный контент о трейдинге в Instagram.</p>
+          <p data-i18n="socials.lead">Подписывайтесь на площадки Alexey Pugachev: новые рыночные разборы на YouTube и личный контент о трейдинге в Instagram.</p>
         </div>
 
-        <div class="social-shortcuts reveal" aria-label="Социальные сети">
-          <a class="social-mini social-mini-youtube" href="https://www.youtube.com/@cryptoinfocom" target="_blank" rel="noopener noreferrer" aria-label="Открыть YouTube-канал CRYPTO INFO">
+        <div class="social-shortcuts reveal" data-i18n-aria="socials.shortcutsAria" aria-label="Социальные сети">
+          <a class="social-mini social-mini-youtube" href="https://www.youtube.com/@cryptoinfocom" target="_blank" rel="noopener noreferrer" data-i18n-aria="socials.youtubeAria" aria-label="Открыть YouTube-канал CRYPTO INFO">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 7.1a2.9 2.9 0 0 0-2-2C17.8 4.6 12 4.6 12 4.6s-5.8 0-7.6.5a2.9 2.9 0 0 0-2 2C2 8.9 2 12 2 12s0 3.1.4 4.9a2.9 2.9 0 0 0 2 2c1.8.5 7.6.5 7.6.5s5.8 0 7.6-.5a2.9 2.9 0 0 0 2-2c.4-1.8.4-4.9.4-4.9s0-3.1-.4-4.9ZM10 15.2V8.8l5.5 3.2-5.5 3.2Z"/></svg>
             <span>YouTube</span>
           </a>
-          <a class="social-mini social-mini-instagram" href="https://www.instagram.com/pugachev.alxy/" target="_blank" rel="noopener noreferrer" aria-label="Открыть Instagram Alexey Pugachev">
+          <a class="social-mini social-mini-instagram" href="https://www.instagram.com/pugachev.alxy/" target="_blank" rel="noopener noreferrer" data-i18n-aria="socials.instagramAria" aria-label="Открыть Instagram Alexey Pugachev">
             <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.7" r="1.1"/></svg>
             <span>Instagram</span>
           </a>
@@ -536,21 +541,21 @@
             </div>
 
             <div class="video-cover video-player" data-youtube-latest>
-              <a class="youtube-local-fallback" data-youtube-card href="https://www.youtube.com/watch?v=fCa7orB4oUs" target="_blank" rel="noopener noreferrer" aria-label="Открыть последний выпуск CRYPTO INFO на YouTube">
+              <a class="youtube-local-fallback" data-youtube-card href="https://www.youtube.com/watch?v=fCa7orB4oUs" target="_blank" rel="noopener noreferrer" data-i18n-aria="socials.youtubeLatestAria" aria-label="Открыть последний выпуск CRYPTO INFO на YouTube">
                 <img data-youtube-thumbnail src="https://i.ytimg.com/vi/fCa7orB4oUs/maxresdefault.jpg" alt="Последний выпуск CRYPTO INFO | TRADING на YouTube" referrerpolicy="no-referrer">
                 <span class="video-shade" aria-hidden="true"></span>
                 <span class="video-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 7.4v9.2l8-4.6-8-4.6Z"/></svg></span>
-                <span class="youtube-local-badge">Смотреть на YouTube ↗︎</span>
+                <span class="youtube-local-badge" data-i18n="socials.youtubeLocalBadge">Смотреть на YouTube ↗︎</span>
               </a>
             </div>
 
             <div class="video-copy">
               <span class="video-meta" data-youtube-status>Автоматически обновляется</span>
               <h3 data-youtube-title>Последний выпуск CRYPTO INFO | TRADING</h3>
-              <p data-youtube-copy>Карточка подключена к официальной ленте канала. Новый выпуск автоматически появится здесь и откроется на YouTube без ошибок встроенного плеера.</p>
+              <p data-youtube-copy data-i18n="socials.youtube.desc">Карточка подключена к официальной ленте канала. Новый выпуск автоматически появится здесь и откроется на YouTube без ошибок встроенного плеера.</p>
               <div class="social-actions">
-                <a class="button" data-youtube-watch href="https://www.youtube.com/watch?v=fCa7orB4oUs" target="_blank" rel="noopener noreferrer">Смотреть выпуск <span aria-hidden="true">↗︎</span></a>
-                <a class="text-link" href="https://www.youtube.com/@cryptoinfocom" target="_blank" rel="noopener noreferrer">Открыть канал <span aria-hidden="true">↗︎</span></a>
+                <a class="button" data-youtube-watch href="https://www.youtube.com/watch?v=fCa7orB4oUs" target="_blank" rel="noopener noreferrer" data-i18n="socials.youtube.watch">Смотреть выпуск <span aria-hidden="true">↗︎</span></a>
+                <a class="text-link" href="https://www.youtube.com/@cryptoinfocom" target="_blank" rel="noopener noreferrer" data-i18n="socials.youtube.openChannel">Открыть канал <span aria-hidden="true">↗︎</span></a>
               </div>
             </div>
           </article>
@@ -565,7 +570,7 @@
             </div>
 
             <div class="iphone-stage">
-              <div class="iphone-frame" aria-label="Instagram-профиль Alexey Pugachev в стилизованном iPhone 17 Pro Max">
+              <div class="iphone-frame" data-i18n-aria="socials.iphoneAria" aria-label="Instagram-профиль Alexey Pugachev в стилизованном iPhone 17 Pro Max">
                 <div class="iphone-screen">
                   <div class="dynamic-island" aria-hidden="true"></div>
                   <img class="instagram-screen-shot" src="assets/instagram-profile-dark-v3.jpg" alt="Актуальный скриншот Instagram-профиля pugachev.alxy в тёмной теме">
@@ -575,9 +580,9 @@
             </div>
 
             <div class="instagram-copy">
-              <span>Личный профиль основателя</span>
-              <h3>Трейдинг, работа и жизнь вне графиков</h3>
-              <a class="button button-outline" href="https://www.instagram.com/pugachev.alxy/" target="_blank" rel="noopener noreferrer">Перейти в Instagram <span aria-hidden="true">↗︎</span></a>
+              <span data-i18n="socials.instagram.label">Личный профиль основателя</span>
+              <h3 data-i18n="socials.instagram.title">Трейдинг, работа и жизнь вне графиков</h3>
+              <a class="button button-outline" href="https://www.instagram.com/pugachev.alxy/" target="_blank" rel="noopener noreferrer" data-i18n="socials.instagram.cta">Перейти в Instagram <span aria-hidden="true">↗︎</span></a>
             </div>
           </article>
         </div>
@@ -591,10 +596,10 @@
           <div class="section-heading section-heading-dark reveal">
             <div class="section-number">07</div>
             <div>
-              <div class="eyebrow"><span></span> Живые результаты</div>
-              <h2>Живая картина<br><em>всегда лучше воображения</em></h2>
+              <div class="eyebrow" data-i18n="results.eyebrow"><span></span> Живые результаты</div>
+              <h2 data-i18n="results.title">Живая картина<br><em>всегда лучше воображения</em></h2>
             </div>
-            <p>Скриншоты сделок и слова учеников — прямо из закрытого Telegram-канала с отзывами. Без монтажа и постановки: только реальные сделки и реальные люди.</p>
+            <p data-i18n="results.lead">Скриншоты сделок и слова учеников — прямо из закрытого Telegram-канала с отзывами. Без монтажа и постановки: только реальные сделки и реальные люди.</p>
           </div>
           <div class="heading-photo reveal reveal-delay">
             <img src="assets/tab-otzyvy.jpg" alt="Отзывы учеников Alexey Pugachev — CRYPTO INFO | TRADING" loading="lazy">
@@ -636,32 +641,32 @@
 
         <div class="results-testimonials">
           <blockquote class="testimonial-card reveal">
-            <p>«Обучение классное, всё доходчиво объясняют в свободной форме, без воды и заумных слов — простым языком для любого уровня знаний. Материал полезный: от стратегий до контроля эмоций.»</p>
-            <cite>Вадим Логутов<span>Отзыв в Telegram</span></cite>
+            <p data-i18n="testimonial.vadim">«Обучение классное, всё доходчиво объясняют в свободной форме, без воды и заумных слов — простым языком для любого уровня знаний. Материал полезный: от стратегий до контроля эмоций.»</p>
+            <cite>Вадим Логутов<span data-i18n="testimonial.sourceLabel">Отзыв в Telegram</span></cite>
           </blockquote>
           <blockquote class="testimonial-card reveal">
-            <p>«Обучение длилось 4 месяца, и они пролетели незаметно. Лёша объяснял всё по несколько раз — у него большой талант и настоящее стремление обучать и помогать людям. Позже я сам стал частью команды.»</p>
-            <cite>Revan_BingX<span>Отзыв в Telegram</span></cite>
+            <p data-i18n="testimonial.revan">«Обучение длилось 4 месяца, и они пролетели незаметно. Лёша объяснял всё по несколько раз — у него большой талант и настоящее стремление обучать и помогать людям. Позже я сам стал частью команды.»</p>
+            <cite>Revan_BingX<span data-i18n="testimonial.sourceLabel">Отзыв в Telegram</span></cite>
           </blockquote>
           <blockquote class="testimonial-card reveal">
-            <p>«Хочу поблагодарить от души за шикарное обучение. Всё подробно, доступно и без лишней воды — только то, что реально работает. Объясняет снова и снова, пока не поймёшь. Я был полным нулём, а теперь вместе с командой зарабатываю на рынке.»</p>
-            <cite>Александр Никитин<span>Отзыв в Telegram</span></cite>
+            <p data-i18n="testimonial.alexandr">«Хочу поблагодарить от души за шикарное обучение. Всё подробно, доступно и без лишней воды — только то, что реально работает. Объясняет снова и снова, пока не поймёшь. Я был полным нулём, а теперь вместе с командой зарабатываю на рынке.»</p>
+            <cite>Александр Никитин<span data-i18n="testimonial.sourceLabel">Отзыв в Telegram</span></cite>
           </blockquote>
           <blockquote class="testimonial-card reveal reveal-delay">
-            <p>«Пришёл на курс с нулевыми знаниями о крипте. Обучение подробное, с повторением по всем темам и ответами на все вопросы. Спустя три месяца уже открываю свои сделки и делаю прибыль. Очень помогает комьюнити и сделки от самого Лёши.»</p>
-            <cite>Владислав<span>Отзыв в Telegram</span></cite>
+            <p data-i18n="testimonial.vladislav">«Пришёл на курс с нулевыми знаниями о крипте. Обучение подробное, с повторением по всем темам и ответами на все вопросы. Спустя три месяца уже открываю свои сделки и делаю прибыль. Очень помогает комьюнити и сделки от самого Лёши.»</p>
+            <cite>Владислав<span data-i18n="testimonial.sourceLabel">Отзыв в Telegram</span></cite>
           </blockquote>
           <blockquote class="testimonial-card reveal reveal-delay">
-            <p>«С самого начала Лёха выделялся — писал чётко, по делу, без воды. Сначала просто тестировал его идеи, и они начали приносить результат — тогда решился на обучение. До этого знания о рынке были полным хаосом, а теперь всё разложено по полочкам.»</p>
-            <cite>Gunzi_Stone<span>Отзыв в Telegram</span></cite>
+            <p data-i18n="testimonial.gunzi">«С самого начала Лёха выделялся — писал чётко, по делу, без воды. Сначала просто тестировал его идеи, и они начали приносить результат — тогда решился на обучение. До этого знания о рынке были полным хаосом, а теперь всё разложено по полочкам.»</p>
+            <cite>Gunzi_Stone<span data-i18n="testimonial.sourceLabel">Отзыв в Telegram</span></cite>
           </blockquote>
           <blockquote class="testimonial-card reveal reveal-delay">
-            <p>«Я кайфую от обучения. Обстановка комфортная, информация воспринимается легко. Нравится, что всегда возвращаемся к повторению предыдущих тем — новый материал прогоняем не один раз, это реально помогает. Ещё супер мотивирует хороший фидбэк по домашкам.»</p>
-            <cite>Ксюша<span>Отзыв в Telegram</span></cite>
+            <p data-i18n="testimonial.ksyusha">«Я кайфую от обучения. Обстановка комфортная, информация воспринимается легко. Нравится, что всегда возвращаемся к повторению предыдущих тем — новый материал прогоняем не один раз, это реально помогает. Ещё супер мотивирует хороший фидбэк по домашкам.»</p>
+            <cite>Ксюша<span data-i18n="testimonial.sourceLabel">Отзыв в Telegram</span></cite>
           </blockquote>
         </div>
 
-        <a class="text-link results-source" href="https://t.me/cryptoinfoprime" target="_blank" rel="noopener noreferrer">Все отзывы и результаты в Telegram <span aria-hidden="true">↗︎</span></a>
+        <a class="text-link results-source" href="https://t.me/cryptoinfoprime" target="_blank" rel="noopener noreferrer" data-i18n="results.sourceLink">Все отзывы и результаты в Telegram <span aria-hidden="true">↗︎</span></a>
       </div>
     </section>
 
@@ -671,9 +676,9 @@
       <div class="container contact-inner">
         <div class="contact-copy reveal">
           <div class="section-number">08</div>
-          <div class="eyebrow dark"><span></span> Контакты</div>
-          <h2>Как связаться<br><em>с нами?</em></h2>
-          <p>По вопросам сотрудничества, партнёрства и деловым предложениям напишите команде CRYPTO INFO | TRADING.</p>
+          <div class="eyebrow dark" data-i18n="contact.eyebrow"><span></span> Контакты</div>
+          <h2 data-i18n="contact.title">Как связаться<br><em>с нами?</em></h2>
+          <p data-i18n="contact.lead">По вопросам сотрудничества, партнёрства и деловым предложениям напишите команде CRYPTO INFO | TRADING.</p>
         </div>
 
         <div class="contact-card reveal reveal-delay">
@@ -684,9 +689,9 @@
           </div>
           <div class="contact-symbol" aria-hidden="true">@</div>
           <div class="contact-card-content">
-            <span class="contact-label">Электронная почта</span>
+            <span class="contact-label" data-i18n="contact.label">Электронная почта</span>
             <a class="contact-email" href="mailto:ceo.cryptoinfo@icloud.com">ceo.cryptoinfo<wbr>@icloud.com</a>
-            <a class="button button-large" href="mailto:ceo.cryptoinfo@icloud.com">Написать на почту <span class="mail-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="5" width="19" height="14" rx="3" stroke="currentColor" stroke-width="2"/><path d="M4 7.5L12 13.5L20 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
+            <a class="button button-large" href="mailto:ceo.cryptoinfo@icloud.com" data-i18n="contact.cta">Написать на почту <span class="mail-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="5" width="19" height="14" rx="3" stroke="currentColor" stroke-width="2"/><path d="M4 7.5L12 13.5L20 7.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span></a>
           </div>
         </div>
       </div>
@@ -696,9 +701,9 @@
       <div class="container final-cta-inner reveal">
         <div>
           <div class="eyebrow"><span></span> CRYPTO INFO | TRADING</div>
-          <h2>Рынок меняется быстро.<br><em>Логика остаётся.</em></h2>
+          <h2 data-i18n="cta.title">Рынок меняется быстро.<br><em>Логика остаётся.</em></h2>
         </div>
-        <a class="button button-large" href="https://t.me/thecryptoinfotrading" target="_blank" rel="noopener noreferrer">Перейти в Telegram <span aria-hidden="true">↗︎</span></a>
+        <a class="button button-large" href="https://t.me/thecryptoinfotrading" target="_blank" rel="noopener noreferrer" data-i18n="cta.button">Перейти в Telegram <span aria-hidden="true">↗︎</span></a>
       </div>
     </section>
   </main>
@@ -707,24 +712,25 @@
     <div class="container footer-main">
       <img src="assets/logo-full.png" alt="CRYPTO INFO | TRADING">
       <div class="footer-links">
-        <a href="#about">О проекте</a>
-        <a href="#formats">Форматы</a>
-        <a href="#method">Подход</a>
-        <a href="#education">Обучение</a>
+        <a href="#about" data-i18n="nav.about">О проекте</a>
+        <a href="#formats" data-i18n="nav.formats">Форматы</a>
+        <a href="#method" data-i18n="nav.method">Подход</a>
+        <a href="#education" data-i18n="nav.education">Обучение</a>
         <a href="#bingx">BingX</a>
         <a href="#vip">VIP Community</a>
-        <a href="#socials">Соцсети</a>
-        <a href="#results">Живые результаты</a>
-        <a href="#contact">Связаться</a>
+        <a href="#socials" data-i18n="nav.socials">Соцсети</a>
+        <a href="#results" data-i18n="nav.results">Живые результаты</a>
+        <a href="#contact" data-i18n="nav.contact">Связаться</a>
         <a href="https://t.me/thecryptoinfotrading" target="_blank" rel="noopener noreferrer">Telegram ↗︎</a>
       </div>
     </div>
     <div class="container footer-bottom">
-      <p>Материалы носят информационный характер и не являются индивидуальной инвестиционной рекомендацией.</p>
+      <p data-i18n="footer.disclaimer">Материалы носят информационный характер и не являются индивидуальной инвестиционной рекомендацией.</p>
       <span>© <span data-year></span> CRYPTO INFO | TRADING</span>
     </div>
   </footer>
 
-  <script src="script.js?v=20260823-3"></script>
+  <script src="i18n.js?v=20260830-1"></script>
+  <script src="script.js?v=20260830-1"></script>
 </body>
 </html>

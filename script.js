@@ -64,9 +64,13 @@ function updateScrollUi() {
   if (progress) progress.style.width = `${scrollable > 0 ? (scrollTop / scrollable) * 100 : 0}%`;
 }
 
+function menuLabel(key, fallback) {
+  return (window.CIT_I18N && window.CIT_I18N.t(key)) || fallback;
+}
+
 function closeMenu() {
   menuButton?.setAttribute('aria-expanded', 'false');
-  menuButton?.setAttribute('aria-label', 'Открыть меню');
+  menuButton?.setAttribute('aria-label', menuLabel('nav.menuOpenAria', 'Открыть меню'));
   navigation?.classList.remove('open');
   document.body.classList.remove('menu-open');
 }
@@ -74,7 +78,9 @@ function closeMenu() {
 menuButton?.addEventListener('click', () => {
   const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
   menuButton.setAttribute('aria-expanded', String(!isOpen));
-  menuButton.setAttribute('aria-label', isOpen ? 'Открыть меню' : 'Закрыть меню');
+  menuButton.setAttribute('aria-label', isOpen
+    ? menuLabel('nav.menuOpenAria', 'Открыть меню')
+    : menuLabel('nav.menuCloseAria', 'Закрыть меню'));
   navigation?.classList.toggle('open', !isOpen);
   document.body.classList.toggle('menu-open', !isOpen);
 });

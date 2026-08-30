@@ -16,6 +16,19 @@
      materials: [{ label: 'Конспект урока', href: 'https://...' }]
    ========================================================================== */
 
+/* i18n bridge — uses the shared TRANSLATIONS map from i18n.js when present,
+   falls back to the Russian default text if i18n.js hasn't loaded yet.
+   Module/lesson titles ("Модуль 1", "Урок 1.1") are placeholder course
+   content and are intentionally left untranslated in both languages. */
+function t(key, vars) {
+  if (window.CIT_I18N && typeof window.CIT_I18N.t === 'function') {
+    return window.CIT_I18N.t(key, vars);
+  }
+  return '';
+}
+
+var LESSON_DESC_PLACEHOLDER_RU = 'Описание урока появится здесь после наполнения программы.';
+
 function buildLessons(moduleNumber, count) {
   return Array.from({ length: count }, (_, i) => {
     const n = i + 1;
@@ -144,7 +157,9 @@ function updateOverallProgress() {
   const done = progress.completed.length;
   const pct = totalLessons ? Math.round((done / totalLessons) * 100) : 0;
   if (progressFill) progressFill.style.width = `${pct}%`;
-  if (progressText) progressText.textContent = `${done} из ${totalLessons} уроков пройдено`;
+  if (progressText) {
+    progressText.textContent = t('cabinet.progressTemplate', { done, total: totalLessons });
+  }
 }
 
 function selectLesson(id) {
@@ -155,7 +170,9 @@ function selectLesson(id) {
 
   lessonIndexEl.textContent = `${moduleIndex + 1}.${lessonIndex + 1}`;
   lessonTitleEl.textContent = lesson.title;
-  lessonDescEl.textContent = lesson.desc;
+  lessonDescEl.textContent = lesson.desc === LESSON_DESC_PLACEHOLDER_RU
+    ? t('cabinet.lesson.descPlaceholder')
+    : lesson.desc;
 
   if (lesson.embed) {
     videoFrame.innerHTML = '';
@@ -169,7 +186,7 @@ function selectLesson(id) {
     videoFrame.innerHTML = `
       <div class="lp-video-placeholder">
         <span class="lp-video-icon" aria-hidden="true">▶</span>
-        <p>Видео появится здесь после загрузки</p>
+        <p>${t('cabinet.video.placeholder')}</p>
       </div>`;
   }
 
@@ -184,7 +201,7 @@ function selectLesson(id) {
   }
 
   watchedBtn.classList.toggle('is-watched', isCompleted(id));
-  watchedBtn.textContent = isCompleted(id) ? 'Урок просмотрен ✓' : 'Отметить как просмотренный';
+  watchedBtn.textContent = isCompleted(id) ? t('cabinet.lesson.watched') : t('cabinet.lesson.markWatched');
 
   document.querySelectorAll('.lp-lesson-item').forEach(el => {
     el.classList.toggle('active', el.dataset.lessonId === id);
@@ -249,3 +266,13 @@ updateOverallProgress();
 
 const startId = (progress.last && findLessonMeta(progress.last)) ? progress.last : allLessons[0]?.id;
 if (startId) selectLesson(startId);
+
+/* Re-render the dynamic parts of the page whenever the language toggle
+   changes — module/lesson titles stay as-is (placeholder course content),
+   but progress text, the watched-state button, and the video placeholder
+   pick up the new language immediately. */
+document.addEventListener('cit:langchange', () => {
+  renderModules();
+  updateOverallProgress();
+  if (currentLessonId) selectLesson(currentLessonId);
+});
