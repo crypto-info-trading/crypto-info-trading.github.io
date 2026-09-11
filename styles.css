@@ -41,11 +41,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 
 .site-header { position: fixed; z-index: 100; top: 0; left: 0; width: 100%; border-bottom: 1px solid transparent; transition: .3s ease; }
 .site-header.scrolled { background: rgba(7, 11, 9, .86); border-color: rgba(255, 255, 255, .07); backdrop-filter: blur(18px); }
-.header-inner { height: 88px; display: flex; align-items: center; gap: 36px; }
+.header-inner { height: 88px; display: flex; align-items: center; gap: 24px; }
 .brand { width: 122px; height: 64px; display: grid; place-items: center; flex: 0 0 auto; }
 .brand img { width: 100%; max-height: 58px; object-fit: contain; }
-.site-nav { display: flex; align-items: center; gap: 19px; margin-left: auto; }
-.site-nav a { position: relative; color: #b2beb7; font-size: 13px; font-weight: 650; }
+.site-nav { display: flex; align-items: center; gap: 10px; margin-left: auto; }
+.site-nav a { position: relative; color: #b2beb7; font-size: 13px; font-weight: 650; white-space: nowrap; }
 .site-nav a::after { content: ""; position: absolute; left: 0; bottom: -8px; width: 100%; height: 2px; background: var(--lime); transform: scaleX(0); transform-origin: right; transition: transform .25s; }
 .site-nav a:hover, .site-nav a:focus-visible { color: var(--white); }
 .site-nav a:hover::after, .site-nav a:focus-visible::after { transform: scaleX(1); transform-origin: left; }
@@ -233,7 +233,7 @@ h1 em, h2 em { color: var(--lime); font-style: normal; }
 .education-aftercare p { max-width: 710px; margin: 0; color: #b5c1ba; font-size: 14px; line-height: 1.58; }
 .education-aftercare .text-link { white-space: nowrap; }
 .education-note { display: flex; align-items: center; gap: 12px; margin: 25px 0 0; color: #75847b; font-family: Consolas, monospace; font-size: 10px; text-transform: uppercase; letter-spacing: .09em; }
-.education-note span { display: grid; width: 24px; height: 24px; place-items: center; flex: 0 0 auto; border: 1px solid rgba(141, 252, 156, .3); color: var(--lime); }
+.education-note-icon { display: grid; width: 24px; height: 24px; place-items: center; flex: 0 0 auto; border: 1px solid rgba(141, 252, 156, .3); color: var(--lime); }
 
 body.payment-open { overflow: hidden; }
 .payment-modal { position: fixed; z-index: 3000; inset: 0; display: grid; place-items: center; padding: 24px; }
