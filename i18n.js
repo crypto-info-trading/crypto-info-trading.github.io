@@ -282,8 +282,8 @@
     "payment.proofHead.kicker": { ru: `ПОДТВЕРЖДЕНИЕ ПЕРЕВОДА`, en: `PAYMENT CONFIRMATION` },
     "payment.proofHead.title": { ru: `Отправьте данные для проверки`, en: `Submit your details for verification` },
     "payment.proofHead.desc": {
-      ru: `После отправки формы откроется личный Telegram Alexey Pugachev.`,
-      en: `After submitting the form, Alexey Pugachev's personal Telegram will open.`
+      ru: `После отправки формы откроется закрытый чат курса в Telegram.`,
+      en: `After submitting the form, the private course chat on Telegram will open.`
     },
     "payment.field.telegram": { ru: `Ваш Telegram username`, en: `Your Telegram username` },
     "payment.field.txid": { ru: `TXID / хеш транзакции`, en: `TXID / transaction hash` },
